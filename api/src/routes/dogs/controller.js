@@ -24,13 +24,19 @@ async function getDogs (req, res){
         res.status(404).json({data: err + ""})
     }};
 
+    
 async function breedForId(req,res){
   const { idRaza } = req.params;
 try{
-        const breedApi = await axios.get(`https://api.thedogapi.com/v1/breeds?api_key=${API_KEY}`)
-if(breedApi.data[idRaza]){
-    const breed1 = breedApi.data[idRaza - 1];
-    res.status(200).json(breed1)
+    const breedApi = await axios.get(`https://api.thedogapi.com/v1/breeds?api_key=${API_KEY}`)
+    let idRazaSwitch = false;
+    breedApi.data.forEach(elem =>{
+        if(Number(elem.id) === Number(idRaza)){
+            idRazaSwitch = elem;
+        }       
+    })  
+if(idRazaSwitch){
+    res.status(200).json(idRazaSwitch)
 }else{
     const breed = await Breed.findByPk(idRaza,{
         include: Temperaments

@@ -1,0 +1,47 @@
+#idDiv1{
+background-image: url(../../img/16.jpg);
+background-size: cover;
+background-color: black;
+background-repeat: no-repeat;
+padding: 24.4%;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+#idDivCont{
+    position: fixed;
+    top: 40px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.titleInt{
+    text-shadow: 2px 2px gray;
+    font-size: 55px;
+    color: white;
+    margin-bottom: 425px;  
+    justify-content: space-around;
+}
+.buttonsIntro{
+    text-shadow: 1px 1px grey;
+    text-decoration: none;    
+    padding: 8px 8px 12px 8px;
+    font-size: 25px;
+    color: white;
+    background-color: black;
+    border-radius: 100px;
+    border: 2px solid white;
+    margin-left: 50px;
+    margin-right: 20px;
+    transition: background-color .8s, font-size .3s ;
+}
+#idDivContLink{
+    display: inline-flex;
+} 
+
+.buttonsIntro:hover{
+    font-size: 27px;
+    border: 0px;
+    background-color:cyan;
+    color: black;
+}

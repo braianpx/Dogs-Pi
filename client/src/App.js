@@ -1,10 +1,19 @@
+import React from 'react';
+import { Route } from 'react-router-dom';
+import Introduction from './components/Introduction/Introduction.jsx';
+import Home from './components/Home/Home.jsx';
+import Breed from './components/Breed/Breed.jsx';
+import Favourites from './components/Favourites/Favourites.jsx';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Henry Dogs</h1>
-    </div>
+<React.Fragment>
+    <Route exact path='/home' component={Home}/>
+    <Route exact path='/' component={Introduction} />
+    <Route axact path='/home/breed/:id' component={Breed} />
+    <Route exact path='/favourites' component={Favourites}/>
+</React.Fragment>
   );
 }
 

@@ -15,7 +15,7 @@ Breed.findOrCreate({
     }
 }).then(dateB =>{
 Temperament.findOrCreate({
-   where: { temperament: temperament }
+   where: { name: temperament }
 })
 .then(dateT =>{
     if(dateB[1]){

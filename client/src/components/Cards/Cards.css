@@ -1,0 +1,109 @@
+.classDivCardCards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding-left: 350px;
+    padding-top: 30px;
+    
+}
+.classCardCards{
+    padding: 15px;
+}
+#idDivH1Load{
+    display: flex;
+    position: relative;
+    left: 465px;
+    top: 150px;
+    flex-direction: column;
+    align-items: center;
+}
+#idImgCards{
+    height: 110px;
+}
+#idH1Cards{
+    position: relative;
+    top: -18px;
+    left: 2px;
+    font-size: 25px;
+}
+#linkBreedId{
+    text-decoration: none;
+    color:cyan;
+}
+.classBtnPage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+.classButton1{
+    position: relative;
+    left: 7px;
+    border: 0px solid white;
+    margin: 10px;
+    padding-right: 8px;
+    padding-left: 25px;
+    font-size: 17px;
+    font-weight: 500;
+    transition: color .2s, font-size .3s;
+}
+.classButton2{
+    position: relative;
+    left: 5px;
+    border: 0px solid white;
+    margin: 10px;
+    padding-left: 7px;
+    padding-right: 22px;
+    font-size: 17px;
+    font-weight: 500;
+    transition: color .2s, font-size .3s, ;
+}
+.classFlechaBtn1{
+    position: relative;
+    right: 100px;
+    color: rgb(239, 239, 239);
+    border-top: 2px solid rgb(10, 180, 180);
+    border-right: 0px solid white;
+    border-left: 2px solid rgb(0, 241, 241);
+    border-bottom: 0px solid white;
+    height: 14px;
+    width: 14px;
+    transform: rotate(315deg);
+    transition: all 0.4s;
+}
+.classFlechaBtn2{
+    position: relative;
+    right: 25px;
+    color: rgb(239, 239, 239);
+    width: 15px;
+    border-top: 2px solid rgb(0, 241, 241);
+    border-right: 2px solid rgb(10, 180, 180);
+    border-left: 0px solid white;
+    border-bottom: 0px solid white;
+    height: 14px;
+    transform: rotate(45deg);
+    transition: all 0.4s;
+}
+
+.classH3{
+    font-weight: 600;
+    margin: 4px;
+    font-size: 17px;
+    color: rgb(53, 50, 50);
+}
+.classDivButton{
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    width: 110px;
+    transition: all .5s;
+}
+.classDivButton,button:hover{
+color:rgb(12, 213, 213);
+font-size: 17.3px;
+}
+
