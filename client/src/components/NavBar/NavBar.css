@@ -32,14 +32,14 @@ color: black
 }
 
 #idH1Nav{
- display: flex;
- align-items: center;
- margin-right: 245px ;
- position: relative;
- top: -10px;
- text-shadow: 1px 1px grey;
-font-size: 28px;
-font-weight: bolder;
+    display: flex;
+    align-items: center;
+    margin-right: 130px ;
+    position: relative;
+    top: -10px;
+    text-shadow: 1px 1px grey;
+    font-size: 28px;
+    font-weight: bolder;
 }
 #idNav{
     display: flex;
@@ -70,4 +70,9 @@ font-weight: bolder;
 #linkabout:hover{
     font-size: 16.5px;
     color: white;
+}
+#idSearchNav{
+    position: relative;
+    right: 60px;
+    bottom: 5px;
 }

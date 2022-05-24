@@ -1,0 +1,77 @@
+.classDivForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.classwarning{
+    width: 500px;
+    height: 25px;
+    font-size: 15px;
+    color: red;
+    border:2px solid red;
+}
+.classSpanWarning{
+color: red;
+}
+.classForm{
+width: 500px;
+height: 25px;
+font-size: 17px;
+margin-top: 8px;
+margin-bottom: 8px;
+}
+.classDivSpan{
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+}
+.classBtnWarning{
+    visibility: hidden;
+}
+.classLabelForm{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:22px;
+    color: rgb(0, 241, 241);
+    text-shadow: 1px 0px 1px black, -1px 0px 1px black, 0px 1px 1px black, 0px -1px 1px black;
+}
+#idDivBtnForm{
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.classBtnForm{
+    border-radius: 15px;
+    background-color: rgb(3, 240, 240);
+    border:1px solid rgb(8, 207, 207);
+    color:black;
+    width: 128px;
+    height: 37px;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: background-color .5s, color .3s, text-shadow .3s, font-size .6s;
+}
+.classBtnForm:hover{
+    color:black;
+    transform:scale(1.02);
+    box-shadow: 0px 0px 0.5px 0.3px grey;
+}
+#idH2Form{
+    font-size: 32px;
+    color: rgb(55, 55, 55);
+}
+.classPaddingBtn{
+    padding: 20px;
+}
+#idH1Form{
+    position: fixed;
+    transition: visibility .5s ;
+    visibility: hidden;
+    color: rgb(230, 63, 63);
+}
+#idSpann{
+    color:rgb(12, 174, 15);
+}

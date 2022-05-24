@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getDetailBreed } from '../../redux/actions/index';
 import NavBar from '../NavBar/NavBar';
+import ImgNull from '../../img/5.jpg';
 import './Breed.css'
 
 const Breeds = (props) => {
@@ -15,14 +16,14 @@ const Breeds = (props) => {
         dispatch(getDetailBreed(id));
     },[id])
 
-console.log(detailBreed.id)
-console.log(id)
+const temp = String(detailBreed.temperaments ?detailBreed.temperaments.map(elem=>{ return elem.name}):detailBreed.temperament);
+
 return(
     <div>
     <NavBar />
     <div id='idDivBreedKey' key={detailBreed.id} >
         {  
-        Object.keys(detailBreed).length === 0 || Number(id) !== Number(detailBreed.id) ?
+        Object.keys(detailBreed).length === 0 || String(id) !== String(detailBreed.id) ?
                 <div id='idDivBreed'>
                 <img src="https://www.gifsanimados.org/data/media/202/perro-imagen-animada-0712.gif" alt='git_dog' id='idImgBreed'/>
                 <h1 id='idH1Breed'>Loading...</h1>
@@ -30,11 +31,11 @@ return(
                 :
                 <div id='idDivDetailBreed' >
                     <div id='idDivImageBreed'>
-                    <img src={detailBreed.image.url} alt='img_dog_breed' id='idImageBreed' />
+                    <img src={detailBreed.image.url?detailBreed.image.url:ImgNull} alt='img_dog_breed' id='idImageBreed' />
                     </div>
                     <div id='idDivBreedDetail'>
                     <h2 id='idH2Breed'>{detailBreed.name}</h2>
-                    <p className='classPBreed'>{detailBreed.temperament}</p>
+                    <p className='classPBreed'>{temp}</p>
                     <p className='classPBreed'>height: {detailBreed.height.metric} cm</p>
                     <p className='classPBreed'>weight: {detailBreed.weight.metric} kg</p>
                     <p className='classPBreed'>life span: {detailBreed.life_span}</p>

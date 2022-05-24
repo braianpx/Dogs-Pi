@@ -15,7 +15,7 @@ class Introduction extends React.Component{
                    <Link to='/home' className='buttonsIntro'> Home </Link>        
                </div>
                <div >
-                   <Link to='/breed_of_day' className='buttonsIntro' > Breed of the day </Link>
+                   <Link to='/breed_of_day' className='buttonsIntro' > Random Breed </Link>
                    </div>
                </div>
             </div>         

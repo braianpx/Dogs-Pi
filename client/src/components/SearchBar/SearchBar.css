@@ -1,0 +1,28 @@
+
+#idInputSearch{
+    border-radius: 8px;
+    width: 200px;
+    height: 22px;
+    font-size: 14px;
+    border:1px solid black;
+}
+#idInputSubmit{
+    background-color: black;
+    color: rgb(0, 241, 241);;
+    border-radius: 14px;
+    width: 62px;
+    height: 27px;
+    font: bolder;
+    font-size: 15px;
+    border: 1px solid rgb(80, 82, 82);
+    transition: color .3s, background-color .2s, border .2s;
+}
+#idInputSubmit:hover{
+color: black;
+background-color: cyan;
+border: rgb(0, 203, 203);
+}
+.classDivInputSub{
+    display: inline-flex;
+    margin-left:5px;
+}

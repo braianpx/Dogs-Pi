@@ -1,0 +1,25 @@
+.classDivFilter{
+padding:0px;
+width: 160px;
+height: 50px;
+}
+.classDivFilterOrigin{
+    position: relative;
+    top: 120px;
+    left: 45px;
+    width: 200px;
+    height: 300px;
+}
+.classSelectFilt{
+    background-color: black;  
+    color: cyan;
+    border-radius: 15px;
+    font-size: 15px;
+    width: 195px;
+    height: 24px;
+}
+.classOptionFilt{
+    background-color: rgb(9, 215, 215);
+    color: black;
+    font-size: 15px;
+}
