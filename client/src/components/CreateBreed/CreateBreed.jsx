@@ -4,6 +4,7 @@ import { postBreed, getTemperaments } from '../../redux/actions/index'
 import validator from './Validator.js'
 import './CreateBreed.css'
 import { Link } from 'react-router-dom'
+
 class CreateBreeed extends Component{
 constructor(props){
     super(props)
@@ -74,6 +75,16 @@ if(swit.length === 0){
         temperament: this.state.temperament.concat(temper)
     })
 }};
+
+deleteTemperament(event){
+const filterTemp = this.state.temperament.filter(el=> el !== event.target.value)
+    this.setState({
+        ...this.state,
+        temperament: filterTemp
+    })
+
+}
+
 render(){
     return(
         <div className='classDivForm'>
@@ -160,14 +171,17 @@ render(){
             })
             }
             </select>
+            <br/>
+            <div id="idDivContentTpSc">
             {this.state.temperament.map(elem=>{
                 return ( 
-                        <div key={elem}>
+                        <div key={elem} className="classDivTempCreated">
+                            <button value={elem} onClick={(event)=>this.deleteTemperament(event)} className='classBtnCreated'>x</button>
                         <span className='classSpanCreate'>{elem}</span>
                         </div>
                       )
                 })}
-
+            </div>
             </div>
 
             <div id='idDivBtnForm'>

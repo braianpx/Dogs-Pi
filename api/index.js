@@ -24,9 +24,14 @@ const server = require('./src/app.js');
 const { conn } = require('./src/db.js');
 
 // Syncing all the models at once.
-conn.sync({ force: false }).then(() => {
+conn.sync({ force: true }).then(() => {
   server.listen(3001, () => {
     console.log('%s listening at 3001'); // eslint-disable-line no-console
+    let switchTempAp = null;
+    axios.get("http://localhost:3001/temperament")
+    .then(tempD=>{
+      if(tempD.data.length === 0){switchTempAp = true}  
+    if(switchTempAp){
     axios.get(`https://api.thedogapi.com/v1/breeds?api_key=${API_KEY}`)
     .then((apiDate)=>{
     let arrayTemp = [];
@@ -46,9 +51,9 @@ conn.sync({ force: false }).then(() => {
         .then((tempTotal)=>{
           console.log('temperaments preload successful')
          })
-    })
+    })}})
     .catch(err=>{
       console.log(`there was an error in the preload of the temperaments, ${err}` )
-    })
+     })
   });
 });

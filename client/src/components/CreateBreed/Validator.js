@@ -21,6 +21,8 @@ export default function validator(statee){
         }
         else if(/[a-zA-Z]/.test(statee.heightMin)){
             state.errors.heightMin = "Contains letters";
+        }else if(statee.heightMin > statee.heightMax){
+            state.errors.heightMin = "height min cannot be greater than height max";
         }
     }
     if(!statee.heightMax){
@@ -32,7 +34,9 @@ export default function validator(statee){
             }
             else if(/[a-zA-Z]/.test(statee.heightMax)){
                 state.errors.heightMax = "Contains letters";
-            }    
+            } else if(statee.heightMin > statee.heightMax){
+                state.errors.heightMax = "height max cannot be less than height min";
+            }   
     }
     if(!statee.weightMin){
         state.errors.weightMin = "weight min is required";    
@@ -43,7 +47,9 @@ export default function validator(statee){
         }
         else if(/[a-zA-Z]/.test(statee.weightMin)){
             state.errors.weightMin = "Contains letters";
-        }    
+        } else if(statee.heightMin > statee.heightMax){
+            state.errors.heightMin = "weight min cannot be greater than weight max";
+        }   
     }
     if(!statee.weightMax){
         state.errors.weightMax = "weight max is required"
@@ -54,6 +60,8 @@ export default function validator(statee){
         }
         else if(/[a-zA-Z]/.test(statee.weightMax)){
             state.errors.weightMax = "Contains letters";
+        } else if(statee.heightMin > statee.heightMax){
+            state.errors.heightMax = "weight max cannot be less than weight min";
         }    
     }
     if(!statee.life_span){

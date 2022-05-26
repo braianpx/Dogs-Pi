@@ -75,3 +75,38 @@ margin-bottom: 8px;
 #idSpann{
     color:rgb(12, 174, 15);
 }
+.classDivTempCreated{
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row-reverse;
+    border: 1px solid black;
+    border-radius: 18px;
+    width: 155px;
+    height: 30px;
+    margin-left: 5px;
+    margin-right:  5px;
+    background-color: rgb(255, 255, 255);
+}
+.classBtnCreated{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 17px;
+    height: 15px;
+    color: red;
+    background-color: white;
+    border: 1px solid red;
+    border-radius: 5px;
+    position: relative;
+    bottom: 2px;
+    left: 2px;
+    transition: color .3s, background-color .5s;
+}
+.classBtnCreated:hover{
+color:white;
+background-color: red;;
+}
+#idDivContentTpSc{
+    width: 510px;
+}

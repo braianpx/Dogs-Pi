@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Search from '../SearchBar/SearchBar.jsx';
+import { getBreeds } from '../../redux/actions/index'
+import { connect } from 'react-redux';
 import './NavBar.css'
 
 class NavBar extends Component {
@@ -20,7 +22,7 @@ render(){
                    
                      <h1 id='idH1Nav'> The House Of The Dogs </h1>
                      <ul id='idUlNav2'>
-                        <li className='classliPi'><Link to='/home' className='linkToLi'> Home </Link></li>
+                        <li className='classliPi' onClick={()=>this.props.getBreeds()}><Link to='/home' className='linkToLi'> Home </Link></li>
                         <li className='classliPi'><Link to='/favorites' className='linkToLi'> Favourites </Link></li>
                         <li className='classliPi'><Link to='/create_breed_dog' className='linkToLi'> Create Breed </Link></li>
                     </ul>
@@ -30,4 +32,4 @@ render(){
     )
   }
 };
-export default (NavBar);
+export default connect(null,{ getBreeds })(NavBar);

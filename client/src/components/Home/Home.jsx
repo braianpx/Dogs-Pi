@@ -21,6 +21,10 @@ let breedsFilter = breeds;
 const breedsPagination = breedsFilter.slice(previousBreedsForPage,followingBreedsForPage);
 
 
+const page1 = () =>{
+    setPage(1)
+}
+
 const followingPage = () => {
     if(page !== limitForPage)
     setPage(page + 1)
@@ -38,7 +42,7 @@ useEffect(()=>{
     return(
         <div>
         <NavBar />
-        <Filter temperaments={temperaments} breeds={breeds}/>  
+        <Filter page1={page1} temperaments={temperaments} breeds={breeds}/>  
         <Cards breeds={breedsPagination} />
         {
         breeds.length > 0?

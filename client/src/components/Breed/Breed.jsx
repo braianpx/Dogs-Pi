@@ -30,16 +30,16 @@ return(
                 </div>
                 :
                 <div id='idDivDetailBreed' >
-                    <div id='idDivImageBreed'>
+                    
                     <img src={detailBreed.image.url?detailBreed.image.url:ImgNull} alt='img_dog_breed' id='idImageBreed' />
-                    </div>
-                    <div id='idDivBreedDetail'>
+                   
+                    
                     <h2 id='idH2Breed'>{detailBreed.name}</h2>
                     <p className='classPBreed'>{temp}</p>
                     <p className='classPBreed'>height: {detailBreed.height.metric} cm</p>
                     <p className='classPBreed'>weight: {detailBreed.weight.metric} kg</p>
                     <p className='classPBreed'>life span: {detailBreed.life_span}</p>
-                </div>
+                
                 </div>
         }
     </div>
