@@ -1,9 +1,21 @@
 const axios = require('axios')
 const { GET_BREEDS, GET_DETAIL_BREED, GET_BREEDS_FILTER, GET_TEMPERAMENTS,
      FILTER_CREATED, FILTER_EXISTING,FILTER_BY_TEMPERAMENT,FILTER_BY_AZ,
-     FILTER_WEIGHT} = require('./actionTypes.js');
+     FILTER_WEIGHT,GET_BREEDS_FOR_FILTER} = require('./actionTypes.js');
 // , GET_BREEDS_FAVOURITES,
 // POST_BREEDS_FAVOURITES, DELETE_BREEDS_FAVOURITES
+
+export const getBreedsForFilter = () =>{
+    return function(dispatch){
+        return axios.get('http://localhost:3001/dogs')
+        .then(data => {
+            return dispatch({
+                type:GET_BREEDS_FOR_FILTER,
+                payload: data.data
+            })
+        }).catch(err=>{return err})
+    }
+}
 
 export const getBreeds = () =>{
     return function(dispatch){
@@ -42,17 +54,17 @@ export const getDetailBreed = (id) => {
     }
 }
 
-export const postBreed = ({name,heightMin,heightMax,weightMin,weightMax,life_span,url,temperament}) => {
+export const postBreed = ({name,heightMin,heightMax,weightMin,weightMax,life_span,url,temperament}) => { 
     return axios.post("http://localhost:3001/dog",{
             name,
             height:{metric:heightMin + " - " + heightMax},
             weight:{metric:weightMin + " - " + weightMax},
-            life_span:life_span,
+            life_span:Number(life_span),
             image:{url:url},
             temperament:temperament,
         })
- .then(data=> data)
- .catch(err=>  err)  
+ .then(data => data)
+ .catch(err =>  err)  
 }
 
 export const getTemperaments = () => {

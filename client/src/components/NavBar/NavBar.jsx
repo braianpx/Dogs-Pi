@@ -23,7 +23,7 @@ render(){
                      <h1 id='idH1Nav'> The House Of The Dogs </h1>
                      <ul id='idUlNav2'>
                         <li className='classliPi' onClick={()=>this.props.getBreeds()}><Link to='/home' className='linkToLi'> Home </Link></li>
-                        <li className='classliPi'><Link to='/favorites' className='linkToLi'> Favourites </Link></li>
+                        <li className='classliPi'><Link to='/favourites' className='linkToLi'> Favourites </Link></li>
                         <li className='classliPi'><Link to='/create_breed_dog' className='linkToLi'> Create Breed </Link></li>
                     </ul>
                 </nav>

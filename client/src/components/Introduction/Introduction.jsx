@@ -5,7 +5,6 @@ class Introduction extends React.Component{
 
  
     render(){
-        console.log(this.props)
         return(
             <div id="idDiv1">
             <div id="idDivCont">  

@@ -1,7 +1,13 @@
-import { Component } from 'react';
+import NavBar from '../NavBar/NavBar.jsx'
 
-class Favourites extends Component{
+const Favourites = () => {
+    return(
 
+        <div>
+        <NavBar />
+        <h1>Holaaaa</h1>
+        </div>
+    )
 }
 
-export default(Favourites)
+export default Favourites;

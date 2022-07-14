@@ -42,7 +42,7 @@ useEffect(()=>{
     return(
         <div>
         <NavBar />
-        <Filter page1={page1} temperaments={temperaments} breeds={breeds}/>  
+        <Filter page1={page1} temperaments={temperaments} breeds={breeds} />  
         <Cards breeds={breedsPagination} />
         {
         breeds.length > 0?

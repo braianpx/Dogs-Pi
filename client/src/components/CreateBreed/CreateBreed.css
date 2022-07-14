@@ -72,9 +72,6 @@ margin-bottom: 8px;
     visibility: hidden;
     color: rgb(230, 63, 63);
 }
-#idSpann{
-    color:rgb(12, 174, 15);
-}
 .classDivTempCreated{
     display: inline-flex;
     align-items: center;
