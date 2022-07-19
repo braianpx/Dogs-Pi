@@ -27,7 +27,7 @@ Breed.findOrCreate({
     }) 
     res.status(201).json({data: 'The dog breed was created successfully'})  
     }else{
-    res.status(401).json({data: `The dog breed with the name  ${name} already exists`})        
+    res.status(401).json({data: `The dog breed with the name ${name} already exists`})        
     }
 })
 

@@ -1,5 +1,4 @@
 const { Breed, Temperament } = require('../../db');
-const { Op } = require('sequelize');
 const axios = require('axios');
 const { API_KEY } = process.env;
 
@@ -15,7 +14,6 @@ async function getDogs (req, res){
                     el.image = {url: elem.image.url}
                 })
             })
-
 
             const breeds1 = await Breed.findAll();
             const breedsFilter = breeds1.filter(elem => elem.name.toUpperCase().includes(name.toUpperCase()))

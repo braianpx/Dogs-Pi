@@ -6,6 +6,8 @@ const index = require('./routes/index/router.js');
 const dogs = require('./routes/dogs/router.js')
 const temperament = require('./routes/temperament/router.js');
 const dog = require('./routes/dog/router.js')
+const user = require('./routes/user/router.js')
+const favorites = require('./routes/favorites/router.js')
 require('./db.js');
 
 const server = express();
@@ -28,6 +30,8 @@ server.use('/', index);
 server.use('/dogs',dogs)
 server.use('/temperament',temperament)
 server.use('/dog',dog)
+server.use('/user', user)
+server.use('/favorites', favorites)
 // Error catching endware.
 server.use((err, req, res, next) => { // eslint-disable-line no-unused-vars
   const status = err.status || 500;
