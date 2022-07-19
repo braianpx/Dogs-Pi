@@ -47,10 +47,9 @@ try{
             model: Favorites
         }
     })
-    console.log("testt")
     res.status(200).json(user.favorites[0].likes)
 }catch(err){
-    res.status(404).json({data: err + ""})
+    res.status(404).json({datas: err + ""})
 } 
 }
 
