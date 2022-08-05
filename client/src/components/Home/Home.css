@@ -87,3 +87,425 @@ background-color:rgb(239, 239, 239);
     transform: rotate(45deg);
     transition: all 0.4s;
 }
+
+/*////////////////////////////*/
+
+
+@media screen and (min-width: 375px) {
+        .classH3{
+            font-weight: 600;
+            margin: 4px;
+            font-size: 17px;
+            color: rgb(53, 50, 50);
+        }
+        .classDivButton{
+            height: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px;
+            width: 110px;
+            transition: all .5s;
+        }
+        .classDivButton,.classButton2:hover{
+            font-size: 17.3px;
+            color:rgb(12, 213, 213);
+        }
+        .classDivButton,.classButton1:hover{
+            color:rgb(12, 213, 213);
+            font-size: 17.3px;
+        }
+        .classBtnPage{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            margin-top: 30px;
+            margin-bottom: 10px;
+            width: 600px;
+            height: 80px;
+            position: relative;
+            left: 300px;
+
+        }
+        .classButton1{
+            position: relative;
+            left: 7px;
+            border: 0px solid transparent;
+            margin: 10px;
+            padding-right: 8px;
+            padding-left: 25px;
+            font-size: 45px;
+            font-weight: 500;
+            transition: color .2s, font-size .3s;
+        }
+        .classButton2{
+            position: relative;
+            left: 5px;
+            border: 0px solid transparent;
+            margin: 10px;
+            padding-left: 7px;
+            padding-right: 22px;
+            font-size: 45px;
+            font-weight: 500;
+            transition: color .2s, font-size .3s, ;
+        }
+        .classFlechaBtn1{
+            position: relative;
+            right: 87px;
+            color: rgb(239, 239, 239);
+            border-top: 2px solid rgb(10, 180, 180);
+            border-right: 0px solid transparent;
+            border-left: 2px solid rgb(0, 241, 241);
+            border-bottom: 0px solid transparent;
+            height: 14px;
+            width: 14px;
+            transform: rotate(315deg);
+            transition: all 0.4s;
+        }
+        .classFlechaBtn2{
+            position: relative;
+            right: 25px;
+            color: rgb(239, 239, 239);
+            width: 15px;
+            border-top: 2px solid rgb(0, 241, 241);
+            border-right: 2px solid rgb(10, 180, 180);
+            border-left: 0px solid white;
+            border-bottom: 0px solid white;
+            height: 14px;
+            transform: rotate(45deg);
+            transition: all 0.4s;
+        }
+}
+@media screen and (min-width: 768px) {
+    .classBtnPage{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 99%;
+        height: 50px;
+        position: relative;
+        left: 0px;
+        top: 360px;
+    }
+        .classH3{
+            font-weight: 600;
+            margin: 4px;
+            font-size: 14px;
+            color: rgb(53, 50, 50);
+        }
+        .classDivButton{
+            height: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px;
+            width: 110px;
+            transition: all .5s;
+        }
+        .classDivButton,.classButton2:hover{
+            font-size: 15px;
+            color:rgb(12, 213, 213);
+        }
+        .classDivButton,.classButton1:hover{
+            color:rgb(12, 213, 213);
+            font-size: 15px;
+        }
+        .classButton1{
+            position: relative;
+            left: 7px;
+            border: 0px solid transparent;
+            margin: 10px;
+            padding-right: 8px;
+            padding-left: 25px;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color .2s, font-size .3s;
+        }
+        .classButton2{
+            position: relative;
+            left: 5px;
+            border: 0px solid transparent;
+            margin: 10px;
+            padding-left: 7px;
+            padding-right: 22px;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color .2s, font-size .3s, ;
+        }
+        .classFlechaBtn1{
+            position: relative;
+            right: 87px;
+            color: rgb(239, 239, 239);
+            border-top: 2px solid rgb(10, 180, 180);
+            border-right: 0px solid transparent;
+            border-left: 2px solid rgb(0, 241, 241);
+            border-bottom: 0px solid transparent;
+            height: 14px;
+            width: 14px;
+            background: transparent;
+            transform: rotate(315deg);
+            transition: all 0.4s;
+        }
+        .classFlechaBtn2{
+            position: relative;
+            right: 25px;
+            color: rgb(239, 239, 239);
+            width: 15px;
+            border-top: 2px solid rgb(0, 241, 241);
+            border-right: 2px solid rgb(10, 180, 180);
+            border-left: 0px solid transparent;
+            border-bottom: 0px solid transparent;
+            height: 14px;
+            background: transparent;
+            transform: rotate(45deg);
+            transition: all 0.4s;
+        }
+}
+@media screen and (min-width: 1024px) {
+    .classBtnPage{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 100%;
+        height: 50px;
+        top:10px;
+        position: relative;
+        left: 0px;
+    }
+        .classH3{
+            font-weight: 600;
+            margin: 4px;
+            font-size: 14px;
+            color: rgb(53, 50, 50);
+        }
+        .classDivButton{
+            height: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px;
+            width: 110px;
+            transition: all .5s;
+        }
+        .classDivButton,.classButton2:hover{
+            font-size: 15px;
+            color:rgb(12, 213, 213);
+        }
+        .classDivButton,.classButton1:hover{
+            color:rgb(12, 213, 213);
+            font-size: 15px;
+        }
+        .classButton1{
+            position: relative;
+            left: 7px;
+            border: 0px solid transparent;
+            margin: 10px;
+            padding-right: 8px;
+            padding-left: 25px;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color .2s, font-size .3s;
+        }
+        .classButton2{
+            position: relative;
+            left: 5px;
+            border: 0px solid transparent;
+            margin: 10px;
+            padding-left: 7px;
+            padding-right: 22px;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color .2s, font-size .3s, ;
+        }
+        .classFlechaBtn1{
+            position: relative;
+            right: 87px;
+            color: rgb(239, 239, 239);
+            border-top: 2px solid rgb(10, 180, 180);
+            border-right: 0px solid transparent;
+            border-left: 2px solid rgb(0, 241, 241);
+            border-bottom: 0px solid transparent;
+            height: 14px;
+            width: 14px;
+            background: transparent;
+            transform: rotate(315deg);
+            transition: all 0.4s;
+        }
+        .classFlechaBtn2{
+            position: relative;
+            right: 25px;
+            color: rgb(239, 239, 239);
+            width: 15px;
+            border-top: 2px solid rgb(0, 241, 241);
+            border-right: 2px solid rgb(10, 180, 180);
+            border-left: 0px solid transparent;
+            border-bottom: 0px solid transparent;
+            height: 14px;
+            background: transparent;
+            transform: rotate(45deg);
+            transition: all 0.4s;
+        }
+}
+@media screen and (min-width: 1366px) {
+    .classBtnPage{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        margin-top: 30px;
+        margin-bottom: 10px;
+        width: 50%;
+        height: 70px;
+        position: relative;
+        left: 500px;
+    }
+    .classButton1{
+        position: relative;
+        left: 7px;
+        border: 0px solid transparent;
+        margin: 10px;
+        padding-right: 8px;
+        padding-left: 25px;
+        font-size: 15px;
+        font-weight: 500;
+        transition: color .2s, font-size .3s;
+    }
+    .classButton2{
+        position: relative;
+        left: 5px;
+        border: 0px solid transparent;
+        margin: 10px;
+        padding-left: 7px;
+        padding-right: 22px;
+        font-size: 15px;
+        font-weight: 500;
+        transition: color .2s, font-size .3s, ;
+    }
+    
+    .classDivButton,.classButton2:hover{
+        font-size: 16px;
+        color:rgb(12, 213, 213);
+    }
+    .classDivButton,.classButton1:hover{
+        color:rgb(12, 213, 213);
+        font-size: 16px;
+    }
+    .classFlechaBtn1{
+        position: relative;
+        right: 87px;
+        color: rgb(239, 239, 239);
+        border-top: 2px solid rgb(10, 180, 180);
+        border-right: 0px solid transparent;
+        border-left: 2px solid rgb(0, 241, 241);
+        border-bottom: 0px solid transparent;
+        height: 14px;
+        width: 14px;
+        transform: rotate(315deg);
+        transition: all 0.4s;
+    }
+    .classFlechaBtn2{
+        position: relative;
+        right: 25px;
+        color: rgb(239, 239, 239);
+        width: 15px;
+        border-top: 2px solid rgb(0, 241, 241);
+        border-right: 2px solid rgb(10, 180, 180);
+        border-left: 0px solid transparent;
+        border-bottom: 0px solid transparent;
+        height: 14px;
+        transform: rotate(45deg);
+        transition: all 0.4s;
+    }
+}
+@media screen and (min-width: 1536px){
+        .classH3{
+            font-weight: 600;
+            margin: 4px;
+            font-size: 17px;
+            color: rgb(53, 50, 50);
+        }
+        .classDivButton{
+            height: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px;
+            width: 110px;
+            transition: all .5s;
+        }
+        .classDivButton,.classButton2:hover{
+            font-size: 17.3px;
+            color:rgb(12, 213, 213);
+        }
+        .classDivButton,.classButton1:hover{
+            color:rgb(12, 213, 213);
+            font-size: 17.3px;
+        }
+        .classBtnPage{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            margin-top: 100px;
+            margin-bottom: 10px;
+            width: 500px;
+            height: 70px;
+            position: relative;
+            left: 665px;
+        }
+        .classButton1{
+            position: relative;
+            left: 7px;
+            border: 0px solid transparent;
+            margin: 10px;
+            padding-right: 8px;
+            padding-left: 25px;
+            font-size: 17px;
+            font-weight: 500;
+            transition: color .2s, font-size .3s;
+        }
+        .classButton2{
+            position: relative;
+            left: 5px;
+            border: 0px solid transparent;
+            margin: 10px;
+            padding-left: 7px;
+            padding-right: 22px;
+            font-size: 17px;
+            font-weight: 500;
+            transition: color .2s, font-size .3s, ;
+        }
+        .classFlechaBtn1{
+            position: relative;
+            right: 95px;
+            color: rgb(239, 239, 239);
+            border-top: 2px solid rgb(10, 180, 180);
+            border-right: 0px solid transparent;
+            border-left: 2px solid rgb(0, 241, 241);
+            border-bottom: 0px solid transparent;
+            height: 14px;
+            width: 14px;
+            transform: rotate(315deg);
+            transition: all 0.4s;
+        }
+        .classFlechaBtn2{
+            position: relative;
+            right: 25px;
+            color: rgb(239, 239, 239);
+            width: 15px;
+            border-top: 2px solid rgb(0, 241, 241);
+            border-right: 2px solid rgb(10, 180, 180);
+            border-left: 0px solid transparent;
+            border-bottom: 0px solid transparent;
+            height: 14px;
+            transform: rotate(45deg);
+            transition: all 0.4s;
+        }
+}

@@ -1,9 +1,12 @@
+
 const axios = require('axios')
 const { GET_BREEDS, GET_DETAIL_BREED, GET_BREEDS_FILTER, GET_TEMPERAMENTS,
      FILTER_CREATED, FILTER_EXISTING,FILTER_BY_TEMPERAMENT,FILTER_BY_AZ,
-     FILTER_WEIGHT,GET_BREEDS_FOR_FILTER} = require('./actionTypes.js');
-// , GET_BREEDS_FAVOURITES,
-// POST_BREEDS_FAVOURITES, DELETE_BREEDS_FAVOURITES
+     FILTER_WEIGHT,GET_BREEDS_FOR_FILTER, LOGIN_USER, DELETE_USER, 
+     GET_BREEDS_FAVORITES, POST_BREEDS_FAVORITES, DELETE_BREEDS_FAVORITES,
+     LOG_OUT} = require('./actionTypes.js');
+
+
 
 export const getBreedsForFilter = () =>{
     return function(dispatch){
@@ -119,3 +122,144 @@ export const filterByWeight = (data) =>{
         })
     }
 }
+
+
+/////////////// User ////////////////
+
+export const createUser = (signinForm) =>{
+    return function(){    
+    return axios({
+            baseURL:'http://localhost:3001/',
+            url: 'user/register',
+            method: 'post',
+            headers: {
+                "Content-Type": "application/json",
+              },
+              data: JSON.stringify(signinForm)
+        })
+        .then(data => data)
+        .catch(err => err )
+    }
+}
+export const logInUser = (signinForm) =>{
+    return function(dispatch){
+        return axios({
+            baseURL: 'http://localhost:3001/',
+            url: 'user/logIn',
+            method: 'post',
+            headers: {
+                "Content-Type": "application/json",
+              },
+            data: JSON.stringify(signinForm)
+        })
+        .then(data =>{
+            dispatch({
+                type: LOGIN_USER,
+                payload:data.data.username,
+            });
+            localStorage.setItem("token",data.data.token)
+            localStorage.setItem("usToken", data.data.username)
+            return data
+        })
+        
+        .catch(err => err)
+    }
+}
+
+export const deleteUser = () =>{
+return function(dispatch){
+    return axios({
+        baseURL: 'http://localhost:3001/',
+        url: 'user/delete',
+        method: 'delete',
+        headers: {
+            "Content-Type": "application/json",
+          },
+        data: JSON.stringify({username: localStorage.getItem("usToken")})
+    }).then(data =>{
+        dispatch({
+            type: DELETE_USER,
+        })
+        localStorage.clear()
+    })
+    .catch(err => err)
+    }
+}
+
+
+export const logOut = () =>{
+    return function(dispatch){
+         dispatch({
+            type:LOG_OUT,
+            payload: false
+        })
+        localStorage.clear()
+    }
+}
+
+
+
+//////////////// Favorites /////////////
+
+export const getAllFavorites = (username) =>{
+    return function(dispatch){
+        return axios({
+            baseURL: 'http://localhost:3001',
+            url: `/favorites/${username}`,
+            method: 'get',
+            headers: {
+            'Content-Type':'application/json',
+            'Authorization' : "Bearer "+ localStorage.getItem("token")}
+        }).then(data =>{
+            dispatch({
+                type: GET_BREEDS_FAVORITES,
+                payload: data.data
+            })
+        })
+        .catch(err => err)
+    }
+}
+
+export const addFavorite = (idBreed)=>{
+    return function(dispatch){
+        return axios({
+            baseURL: 'http://localhost:3001',
+            url: `/favorites`,
+            method: 'post',
+            headers: {
+            'Content-Type':'application/json',
+            'Authorization' : "Bearer "+ localStorage.getItem("token")},
+            data:JSON.stringify({idBreed:idBreed})
+        }).then(data =>{
+            dispatch({
+                type: POST_BREEDS_FAVORITES,
+                payload: idBreed
+            })
+            return data.data;
+        }).catch(err => err)
+    } 
+}
+
+export const deleteFavortite =  (idBreed, idFavorite) =>{
+    return function(dispatch){
+      return axios({
+            baseURL: 'http://localhost:3001',
+            url: `/favorites/delete`,
+            method: 'delete',
+            headers: {
+                'Content-Type':'application/json',
+                'Authorization' : "Bearer "+ localStorage.getItem("token")},
+            data:JSON.stringify({
+                idBreed:idBreed,
+                idFavorite:idFavorite
+            })
+        }).then(data =>{
+            dispatch({
+                type: DELETE_BREEDS_FAVORITES,
+                payload: idBreed
+                })
+            return data.data
+        }).catch(err => err)
+    }
+}
+

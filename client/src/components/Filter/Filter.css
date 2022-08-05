@@ -4,6 +4,9 @@ width: 160px;
 height: 50px;
 }
 .classDivFilterOrigin{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     position: relative;
     top: 120px;
     left: 45px;
@@ -23,3 +26,126 @@ height: 50px;
     color: black;
     font-size: 15px;
 }
+
+
+/*////////////////////////////////*/
+
+
+@media screen and (min-width: 768px){
+    .classDivFilterOrigin{
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        left: 55px;
+        top: 35px;
+        width: 170px;
+        height: 310px;
+    }
+    .classSelectFilt{
+        background-color: black;  
+        color: cyan;
+        border-radius: 15px;
+        font-size: 11px;
+        width: 150px;
+        height: 20px;
+    }
+    .classDivFilter{
+        padding-left:10px;
+        width: 170px;
+        height: 40px;
+        }
+        .classOptionFilt{
+            background-color: rgb(9, 215, 215);
+            color: black;
+            font-size: 11px;
+        }
+    }
+@media screen and (min-width: 1024px) {
+    .classDivFilterOrigin{
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        left: 140px;
+        top: 20px;
+        width: 170px;
+        height: 310px;
+    }
+    .classSelectFilt{
+        background-color: black;  
+        color: cyan;
+        border-radius: 15px;
+        font-size: 12px;
+        width: 170px;
+        height: 20px;
+    }
+    .classDivFilter{
+        padding-left:10px;
+        width: 170px;
+        height: 40px;
+        }
+        .classOptionFilt{
+            background-color: rgb(9, 215, 215);
+            color: black;
+            font-size: 13px;
+        }
+    }
+@media screen and (min-width: 1366px) {
+        .classDivFilter{
+            padding:0px;
+            width: 160px;
+            height: 50px;
+            }
+            .classDivFilterOrigin{
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                top: 90px;
+                left: 45px;
+                width: 200px;
+                height: 300px;
+            }
+            .classSelectFilt{
+                background-color: black;  
+                color: cyan;
+                border-radius: 15px;
+                font-size: 14px;
+                width: 195px;
+                height: 24px;
+            }
+            .classOptionFilt{
+                background-color: rgb(9, 215, 215);
+                color: black;
+                font-size: 14px;
+            }
+    }
+@media screen and (min-width: 1536px ){
+        .classDivFilter{
+            padding:0px;
+            width: 160px;
+            height: 50px;
+            }
+            .classDivFilterOrigin{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                position: relative;
+                top: 120px;
+                left: 45px;
+                width: 200px;
+                height: 300px;
+            }
+            .classSelectFilt{
+                background-color: black;  
+                color: cyan;
+                border-radius: 15px;
+                font-size: 15px;
+                width: 195px;
+                height: 24px;
+            }
+            .classOptionFilt{
+                background-color: rgb(9, 215, 215);
+                color: black;
+                font-size: 15px;
+            }
+    }
