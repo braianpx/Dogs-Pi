@@ -115,7 +115,6 @@ const filterTemp = state.temperament.filter(el=> el !== event.target.value)
                 value={state.name}>
                 </input>
             </div>
-
             <div>        
             <label className='classLabelForm'>Height Min (cm)</label>
                 <br/>

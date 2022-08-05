@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import NavBar from '../NavBar/NavBar.jsx';
 import Cards from '../Cards/Cards.jsx';
 import Filter from '../Filter/Filter.jsx';
-import { getBreeds, getTemperaments } from '../../redux/actions/index';
+import { getBreeds, getTemperaments, getAllFavorites } from '../../redux/actions/index';
 import './Home.css'
 
 const Home = () =>{
@@ -11,6 +11,8 @@ const Home = () =>{
 const dispatch = useDispatch();
 const breeds = useSelector(state => state.breeds)
 const temperaments = useSelector(state => state.temperaments)
+const breedsFavorites = useSelector(state => state.breedsFavorites)
+const user = useSelector(state => state.user)
 
 const [page, setPage ] = useState(1);
 const breedsForPage = 8;
@@ -37,13 +39,15 @@ const previousPage = () =>{
 useEffect(()=>{
     dispatch(getBreeds());
     dispatch(getTemperaments());
+    if(user.username){
+    dispatch(getAllFavorites(user.username));
+    }
 },[])
-
     return(
         <div>
         <NavBar />
         <Filter page1={page1} temperaments={temperaments} breeds={breeds} />  
-        <Cards breeds={breedsPagination} />
+        <Cards breedsFavorites={breedsFavorites} breeds={breedsPagination} username={user.username} />
         {
         breeds.length > 0?
      <div className='classBtnPage'>

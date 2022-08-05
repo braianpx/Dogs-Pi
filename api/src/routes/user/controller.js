@@ -17,7 +17,7 @@ try{
     if(user[1]){
         res.status(202).json({data: 'The user was created successfully'})
     }else{
-        res.status(401).json({data: `The username ${username} already exists`}).redirect('/login')
+        res.status(401).json({data: `The username ${username} already exists`})
     }
     
 }catch(err){
@@ -30,28 +30,26 @@ try{
 async function logIn(req,res){
 const { username, password } = req.body;
 try{
-
 let user = await User.findOne({where:{username:username}})
 
-let confirmPassword = user === false ? false : await bcrypt.compare( password , user.password)
+let confirmPassword = user === null ? false : await bcrypt.compare(password, user.password);
 
 if(!(user && confirmPassword)){
 res.status(404).json({data: "Invalid username or password"})
-}
+}else{
 
 const userForToken = {
     id: user.id,
     username: username
+};
+const token = jwt.sign(userForToken, process.env.SECRETT, {
+    expiresIn: 60 * 60 * 24 * 2,
+  });
+
+res.send({username: user.username, token});
 }
-
-const token = jwt.sign(userForToken, process.env.SECRETT)
-
-res.status(200).json({
-    username: user.username,
-    token
-});
-
 }catch(err){
+    console.log(err);
 res.status(404).json({data: err + ""})
 }
 };
@@ -63,10 +61,11 @@ res.status(404).json({data: err + ""})
 
 async function deleteUser(req,res){
 const { username } = req.body;
+req.user = false;
+console.log(username)
 try{
     await User.destroy({where:{username:username}})
-    
-    res.status(201).json({data:"The user was successfully deleted"}).redirect('/home')
+    res.status(201).json({data:"The user was successfully deleted"})
 }
 catch(err){
     res.status(401).json({data: err + ""})

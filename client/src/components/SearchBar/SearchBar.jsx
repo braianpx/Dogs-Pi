@@ -24,8 +24,8 @@ const handleInputChange = (e) =>{
     })
 }
     return(
-        <div id="idDivOriginSearch">
-            <form onSubmit={(e)=> handleOnSubmit(e)}>
+        <div>
+            <form id='idDivOriginSearch' onSubmit={(e)=> handleOnSubmit(e)}>
             <input id="idInputSearch" type='text'  autoComplete='off' placeholder='Breed Name' value={input.breed} onChange={(e)=> handleInputChange(e)}></input>
             <div className='classDivInputSub'>
             <input id="idInputSubmit" type="submit" value="Search" ></input>
