@@ -43,13 +43,12 @@ const userForToken = {
     username: username
 };
 const token = jwt.sign(userForToken, process.env.SECRETT, {
-    expiresIn: 60 * 60 * 24 * 2,
+    expiresIn: 60 * 60 * 24 * 3,
   });
 
 res.send({username: user.username, token});
 }
 }catch(err){
-    console.log(err);
 res.status(404).json({data: err + ""})
 }
 };

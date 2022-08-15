@@ -12,9 +12,8 @@ require('./db.js');
 
 const server = express();
 
-server.name = 'API';
-let vatiable = 'http://localhost:3000';
-// server.use(bodyParser.urlencoded({ extended: false}));
+server.name = 'Api-Dogs-Pi';
+// let variable = 'http://localhost:3000';
 server.use(bodyParser.urlencoded({ extended: true, limit: '50mb' }));
 server.use(bodyParser.json({ limit: '50mb' }));
 server.use(cookieParser());
@@ -26,14 +25,16 @@ server.use((req, res, next) => {
   res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
   next();
 });
-
 server.use('/', index);
 server.use('/dogs',dogs)
 server.use('/temperament',temperament)
 server.use('/dog',dog)
 server.use('/user', user)
 server.use('/favorites', favorites)
-
+server.use((req, res, next) => {
+  console.log(req.cookies);
+  next();
+});
 // Error catching endware.
 server.use((err, req, res, next) => { // eslint-disable-line no-unused-vars
   const status = err.status || 500;

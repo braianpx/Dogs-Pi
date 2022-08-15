@@ -31,7 +31,68 @@ border: rgb(0, 203, 203);
     margin-left:5px;
 }
 
-@media screen and (min-width: 360px) {
+
+/*/////////////////////////////*/
+
+@media screen and (min-width: 320px) {
+    #idInputSearch{
+        border-radius: 8px;
+        width: 180px;
+        height: 20px;
+        font-size: 12px;
+        border:1px solid black;
+    }
+    #idInputSubmit{
+        background-color: black;
+        color: rgb(0, 241, 241);;
+        border-radius: 18px;
+        width: 55px;
+        height: 24px;
+        font: bolder;
+        font-size: 12px;
+        border: 1px solid rgb(80, 82, 82);
+        transition: color .3s, background-color .2s, border .2s;
+    }
+    #idInputSubmit:hover{
+    color: black;
+    background-color: cyan;
+    border: rgb(0, 203, 203);
+    }
+    .classDivInputSub{
+        display: inline-flex;
+        margin-left:5px;
+    } 
+}
+@media screen and (min-width: 375px) {
+    #idInputSearch{
+        border-radius: 8px;
+        width: 180px;
+        height: 20px;
+        font-size: 12px;
+        border:1px solid black;
+    }
+    #idInputSubmit{
+        background-color: black;
+        color: rgb(0, 241, 241);;
+        border-radius: 18px;
+        width: 55px;
+        height: 24px;
+        font: bolder;
+        font-size: 12px;
+        border: 1px solid rgb(80, 82, 82);
+        transition: color .3s, background-color .2s, border .2s;
+    }
+    #idInputSubmit:hover{
+    color: black;
+    background-color: cyan;
+    border: rgb(0, 203, 203);
+    }
+    .classDivInputSub{
+        display: inline-flex;
+        margin-left:5px;
+    } 
+}
+@media screen and (min-width: 425px) {
     #idInputSearch{
         border-radius: 8px;
         width: 180px;
