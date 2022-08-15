@@ -159,9 +159,8 @@ export const logInUser = (signinForm) =>{
             });
             localStorage.setItem("token",data.data.token)
             localStorage.setItem("usToken", data.data.username)
-            return data
+           return data;
         })
-        
         .catch(err => err)
     }
 }
@@ -216,7 +215,15 @@ export const getAllFavorites = (username) =>{
                 payload: data.data
             })
         })
-        .catch(err => err)
+        .catch(err =>{
+            if(err.response.data.data === "TokenExpiredError: jwt expired"){
+            dispatch({
+                    type: LOG_OUT,
+                    payload: false
+                })
+            localStorage.clear();
+            alert("session expired")}
+        })
     }
 }
 

@@ -12,8 +12,7 @@ if(authorization && authorization.toLowerCase().startsWith('bearer')){
 const decodedToken = jwt.verify(token, process.env.SECRETT);
 
 if(!token || !decodedToken.id ){
-    res.status(401).json({data: "token invalid or missing"})
-   
+    res.status(401).json({data: "token invalid or missing"})   
 }
 
 const { id } = decodedToken;
@@ -22,6 +21,7 @@ next();
 
 }
 catch(err){
+    req.user = false;
     res.status(404).json({data: err + ""})
 }
 };

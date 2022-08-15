@@ -6,7 +6,7 @@ import LogIn from "../LogIn/LogIn.jsx";
 import SigIn from "../SigIn/SigIn.jsx";
 import './LoginAndSigIn.css';
 
-const LoginAndSigIn = () => {
+const LoginAndSigIn = (props) => {
 
 const [switchLog, setSwitchLog] = useState(true)
 

@@ -110,8 +110,271 @@ background-color: red;;
 
 /* //////////////////////// */
 
+@media screen and (min-width: 320px) {
+    .classSpanWarning{
+        font-size: 14px;
+        }
+    .classDivSpan{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+       }
+    .classDivForm{
+        display: flex;
+        flex-direction: column;
+        align-items:stretch;
+    }
+    .classwarning{
+        width: 250px;
+        height: 21px;
+        font-size: 12px;
+        color: red;
+        border:2px solid red;
+    }
+    .classForm{
+        width: 250px;
+        height: 20px;
+        font-size: 13px;
+        margin-top: 7px;
+        margin-bottom: 5px;
+        }
+        .classLabelForm{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size:16px;
+            color: rgb(0, 241, 241);
+            text-shadow: 1px 0px 1px black, -1px 0px 1px black, 0px 1px 1px black, 0px -1px 1px black;
+        }
+        .classBtnForm{
+            border-radius: 15px;
+            background-color: rgb(3, 240, 240);
+            border:1px solid black ;
+            color:black;
+            width: 100px;
+            height: 30px;
+            font-size: 13px;
+            font-family: Arial, Helvetica, sans-serif;
+            transition: background-color .5s, color .3s, text-shadow .3s, font-size .6s;
+        }
+        #idH2Form{
+            font-size: 23px;
+            color: rgb(55, 55, 55);
+        }
+        .classDivTempCreated{
+            display: inline-flex;
+            align-items: center;
+            justify-content: space-evenly;
+            flex-direction: row-reverse;
+            border: 1px solid black;
+            border-radius: 18px;
+            width: 118px;
+            height: 22px;
+            margin-left: 5px;
+            margin-right:  5px;
+            font-size: 12px;
+            background-color: rgb(255, 255, 255);
+        }
+        .classBtnCreated{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 15px;
+            height: 14px;
+            color: red;
+            background-color: white;
+            border: 1px solid red;
+            border-radius: 5px;
+            position: relative;
+            bottom: 2px;
+            font-size: 12px;
+            left: 0px;
+            transition: color .3s, background-color .5s;
+        }
+        #idDivContentTpSc{
+            width: 450px;
+        }
+    }
 
+@media screen and (min-width: 375px) {
+    .classSpanWarning{
+        font-size: 14px;
+        }
+    .classDivSpan{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+       }
+    .classDivForm{
+        display: flex;
+        flex-direction: column;
+        align-items:stretch;
+    }
+    .classwarning{
+        width: 250px;
+        height: 21px;
+        font-size: 12px;
+        color: red;
+        border:2px solid red;
+    }
+    .classForm{
+        width: 250px;
+        height: 20px;
+        font-size: 13px;
+        margin-top: 7px;
+        margin-bottom: 5px;
+        }
+        .classLabelForm{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size:16px;
+            color: rgb(0, 241, 241);
+            text-shadow: 1px 0px 1px black, -1px 0px 1px black, 0px 1px 1px black, 0px -1px 1px black;
+        }
+        .classBtnForm{
+            border-radius: 15px;
+            background-color: rgb(3, 240, 240);
+            border:1px solid black ;
+            color:black;
+            width: 100px;
+            height: 30px;
+            font-size: 13px;
+            font-family: Arial, Helvetica, sans-serif;
+            transition: background-color .5s, color .3s, text-shadow .3s, font-size .6s;
+        }
+        #idH2Form{
+            font-size: 23px;
+            color: rgb(55, 55, 55);
+        }
+        .classDivTempCreated{
+            display: inline-flex;
+            align-items: center;
+            justify-content: space-evenly;
+            flex-direction: row-reverse;
+            border: 1px solid black;
+            border-radius: 18px;
+            width: 118px;
+            height: 22px;
+            margin-left: 5px;
+            margin-right:  5px;
+            font-size: 12px;
+            background-color: rgb(255, 255, 255);
+        }
+        .classBtnCreated{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 15px;
+            height: 14px;
+            color: red;
+            background-color: white;
+            border: 1px solid red;
+            border-radius: 5px;
+            position: relative;
+            bottom: 2px;
+            font-size: 12px;
+            left: 0px;
+            transition: color .3s, background-color .5s;
+        }
+        #idDivContentTpSc{
+            width: 450px;
+        }
+    }
+@media screen and (min-width: 425px) {
+    .classSpanWarning{
+        font-size: 14px;
+        }
+    .classDivSpan{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+       }
+    .classDivForm{
+        display: flex;
+        flex-direction: column;
+        align-items:stretch;
+    }
+    .classwarning{
+        width: 250px;
+        height: 21px;
+        font-size: 12px;
+        color: red;
+        border:2px solid red;
+    }
+    .classForm{
+        width: 250px;
+        height: 20px;
+        font-size: 13px;
+        margin-top: 7px;
+        margin-bottom: 5px;
+        }
+        .classLabelForm{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size:16px;
+            color: rgb(0, 241, 241);
+            text-shadow: 1px 0px 1px black, -1px 0px 1px black, 0px 1px 1px black, 0px -1px 1px black;
+        }
+        .classBtnForm{
+            border-radius: 15px;
+            background-color: rgb(3, 240, 240);
+            border:1px solid black ;
+            color:black;
+            width: 100px;
+            height: 30px;
+            font-size: 13px;
+            font-family: Arial, Helvetica, sans-serif;
+            transition: background-color .5s, color .3s, text-shadow .3s, font-size .6s;
+        }
+        #idH2Form{
+            font-size: 23px;
+            color: rgb(55, 55, 55);
+        }
+        .classDivTempCreated{
+            display: inline-flex;
+            align-items: center;
+            justify-content: space-evenly;
+            flex-direction: row-reverse;
+            border: 1px solid black;
+            border-radius: 18px;
+            width: 118px;
+            height: 22px;
+            margin-left: 5px;
+            margin-right:  5px;
+            font-size: 12px;
+            background-color: rgb(255, 255, 255);
+        }
+        .classBtnCreated{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 15px;
+            height: 14px;
+            color: red;
+            background-color: white;
+            border: 1px solid red;
+            border-radius: 5px;
+            position: relative;
+            bottom: 2px;
+            font-size: 12px;
+            left: 0px;
+            transition: color .3s, background-color .5s;
+        }
+        #idDivContentTpSc{
+            width: 450px;
+        }
+}
 @media screen and (min-width: 768px) {
+    .classSpanWarning{
+        font-size: 16px;
+        }
+    .classDivSpan{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+       }
+       .classDivForm{
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+    }
     .classwarning{
         width: 450px;
         height: 22px;
