@@ -1,11 +1,11 @@
 const { Breed, Temperament } = require('../../db')
 
 function createBreed(req,res){
-const { name, height, weight, life_span, image , temperament} = req.body;
-
+const { name, height, weight, life_span, image, temperament} = req.body;
+if(!height||!weight||!life_span||!temperament) res.status(401).json({data:'missing data'})
 if(!name[0] && !name[name.length -1]) res.status(401).json({data: 'the name is empty'})
 else if(!parseInt(name)){
-Breed.findOrCreate({
+    Breed.findOrCreate({
     where:{name: name},
     defaults:{
         height,
