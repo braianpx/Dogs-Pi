@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon -L",
-    "test": "mocha -w ./tests/routes/dog.spec.js",
-    "test-routes": "mocha -w ./tests/routes/dog.spec.js"
+    "test": "mocha -w ./tests/**/*.spec.js",
+    "modelsTest": "mocha -w ./tests/models/dog.spec.js",
+    "routeTest": "mocha -w ./tests/routes/dog.spec.js"
   },
   "author": "Henry",
   "license": "ISC",

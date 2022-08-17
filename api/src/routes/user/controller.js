@@ -7,6 +7,8 @@ const jwt = require('jsonwebtoken');
 async function createUser(req,res) { 
 try{
     const { username, password } = req.body;
+    if(!username||!password) res.status(401).json({data:"missing data"})
+
     let passwordHash = await bcrypt.hash(password, 10)
     let user = await User.findOrCreate({
         where:{username:username},
@@ -15,7 +17,7 @@ try{
         } 
     });
     if(user[1]){
-        res.status(202).json({data: 'The user was created successfully'})
+        res.status(201).json({data: 'The user was created successfully'})
     }else{
         res.status(401).json({data: `The username ${username} already exists`})
     }
@@ -61,13 +63,12 @@ res.status(404).json({data: err + ""})
 async function deleteUser(req,res){
 const { username } = req.body;
 req.user = false;
-console.log(username)
 try{
     await User.destroy({where:{username:username}})
-    res.status(201).json({data:"The user was successfully deleted"})
+    res.status(200).json({data:"The user was successfully deleted"})
 }
 catch(err){
-    res.status(401).json({data: err + ""})
+    res.status(404).json({data: err + ""})
 }
 }
 

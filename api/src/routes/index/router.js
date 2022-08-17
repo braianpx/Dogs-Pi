@@ -11,7 +11,7 @@ const router = Router();
 
 router.get('/',(req, res)=>{
 
-    res.json({name:"braian"})
+    res.json({name:"ola :)"})
     
 })
 

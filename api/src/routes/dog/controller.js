@@ -40,8 +40,24 @@ else{
 }
 }
 
+///////////      deleted      /////////////
+
+async function deletedBreed(req,res){
+const {nameBreed} = req.body;
+try{
+await Breed.destroy({
+    where: {
+        name: nameBreed
+    }
+  });
+  res.status(200).json({data:"Breed was successfully deleted"})
+}catch(err){
+    res.status(404).json({data:err+""})
+}
+}
 
 
 module.exports = {
     createBreed,
+    deletedBreed
 }

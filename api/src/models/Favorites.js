@@ -7,9 +7,11 @@ module.exports = (sequelize) => {
             defaultValue: DataTypes.UUIDV4,
             unique: true,
             primaryKey:true,
+            allowNull: false
         },
         likes:{
             type: DataTypes.ARRAY(DataTypes.STRING),
+            allowNull: false
         }
     })
  };

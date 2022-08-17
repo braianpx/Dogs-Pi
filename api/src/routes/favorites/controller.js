@@ -5,8 +5,6 @@ const axios = require('axios');
 async function newFavorite(req,res){
 const { idBreed } = req.body;
 const idUser = req.user;
-console.log(idBreed)
-console.log(idUser)
 try{
     let userFavorite = await User.findOne({
         where:{id:idUser},
