@@ -3,7 +3,7 @@ import { postBreed, getTemperaments } from '../../redux/actions/index';
 import validator from './Validator.js';
 import './CreateBreed.css';
 import { useState , useEffect} from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 
 const CreateBreeed  = () =>{
 
@@ -17,20 +17,21 @@ const [state, setState] = useState({
         weightMax:"",
         life_span:"",
         url:"",
-        temperament:[]
+        temperament:[],
+        switchBt:false,
+        redirect:false
     });
 const [errors, setErrors] = useState({})
 
 useEffect(()=>{
     dispatch(getTemperaments());
-},[])
+},[dispatch])
 
 const handleOnSubmit = async (e) => { 
         e.preventDefault();
         try{
         if(state.switchBt){
             let resp = await postBreed(state)
-            console.log(resp)
             if(Object.keys(resp).filter(el => el === "response").length > 0){
                 alert(resp.response.data.data)
                 setErrors({
@@ -47,7 +48,8 @@ const handleOnSubmit = async (e) => {
                 life_span:"",
                 url:"",
                 temperament:[],
-                switchBt: false 
+                switchBt: false,
+                redirect: resp.data.idBreed
             });
             alert(resp.data.data);
          }
@@ -56,10 +58,7 @@ const handleOnSubmit = async (e) => {
                 ...state
             }));
         }
-    }catch(err){
-        
-    }            
-        }      
+    }catch(err){}}      
 const handleInputChange = (e) => {
     setState({
         ...state,
@@ -97,6 +96,10 @@ const filterTemp = state.temperament.filter(el=> el !== event.target.value)
         temperament: filterTemp
     }))
 }
+
+if(state.redirect){
+    return <Redirect to={`/home/breed/${state.redirect}`} />
+}else{
     return(
         <div className='classDivForm'>
         <h2 id="idH2Form">Create Breed</h2>
@@ -194,7 +197,8 @@ const filterTemp = state.temperament.filter(el=> el !== event.target.value)
                  <input className={Object.keys(errors).filter(elem=> elem === "url").length > 0? 'classwarning': 'classForm'} 
                  placeholder='https://imagedog/pitbull.jpg' 
                  name="url" 
-                 type="url" 
+                 type="url"
+                 value={state.url} 
                  onChange={(e)=> handleInputChange(e)}></input>
             
             </div>
@@ -241,5 +245,5 @@ const filterTemp = state.temperament.filter(el=> el !== event.target.value)
         </div>
     )
             }
-
+        }
 export default CreateBreeed;

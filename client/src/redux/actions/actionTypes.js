@@ -14,7 +14,7 @@ const GET_BREEDS_FOR_FILTER = "GET_BREEDS_FOR_FILTER";
 const DELETE_USER = "DELETE_USER";
 const LOGIN_USER = "LOGIN_USER";
 const LOG_OUT = "LOG_OUT"
-
+const API_LOCAL= 'http://localhost:3001'
 module.exports = {
     GET_BREEDS,
     GET_BREEDS_FILTER,
@@ -32,4 +32,5 @@ module.exports = {
     DELETE_USER,
     LOGIN_USER,
     LOG_OUT,
+    API_LOCAL,
 }

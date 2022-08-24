@@ -8,6 +8,7 @@ import './NavBar.css'
 class NavBar extends Component {
 
 componentDidMount(){
+  if(this.props.user.username) 
   this.props.getAllFavorites(this.props.user.username);
 }
 

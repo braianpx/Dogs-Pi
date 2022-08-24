@@ -36,138 +36,44 @@ border: rgb(0, 203, 203);
 
 @media screen and (min-width: 320px) {
     #idInputSearch{
-        border-radius: 8px;
         width: 180px;
         height: 20px;
         font-size: 12px;
-        border:1px solid black;
     }
     #idInputSubmit{
-        background-color: black;
-        color: rgb(0, 241, 241);;
         border-radius: 18px;
         width: 55px;
         height: 24px;
-        font: bolder;
         font-size: 12px;
-        border: 1px solid rgb(80, 82, 82);
-        transition: color .3s, background-color .2s, border .2s;
     }
-    #idInputSubmit:hover{
-    color: black;
-    background-color: cyan;
-    border: rgb(0, 203, 203);
-    }
-    .classDivInputSub{
-        display: inline-flex;
-        margin-left:5px;
-    } 
-}
-@media screen and (min-width: 375px) {
-    #idInputSearch{
-        border-radius: 8px;
-        width: 180px;
-        height: 20px;
-        font-size: 12px;
-        border:1px solid black;
-    }
-    #idInputSubmit{
-        background-color: black;
-        color: rgb(0, 241, 241);;
-        border-radius: 18px;
-        width: 55px;
-        height: 24px;
-        font: bolder;
-        font-size: 12px;
-        border: 1px solid rgb(80, 82, 82);
-        transition: color .3s, background-color .2s, border .2s;
-    }
-    #idInputSubmit:hover{
-    color: black;
-    background-color: cyan;
-    border: rgb(0, 203, 203);
-    }
-    .classDivInputSub{
-        display: inline-flex;
-        margin-left:5px;
-    } 
-}
-@media screen and (min-width: 425px) {
-    #idInputSearch{
-        border-radius: 8px;
-        width: 180px;
-        height: 20px;
-        font-size: 12px;
-        border:1px solid black;
-    }
-    #idInputSubmit{
-        background-color: black;
-        color: rgb(0, 241, 241);;
-        border-radius: 18px;
-        width: 55px;
-        height: 24px;
-        font: bolder;
-        font-size: 12px;
-        border: 1px solid rgb(80, 82, 82);
-        transition: color .3s, background-color .2s, border .2s;
-    }
-    #idInputSubmit:hover{
-    color: black;
-    background-color: cyan;
-    border: rgb(0, 203, 203);
-    }
-    .classDivInputSub{
-        display: inline-flex;
-        margin-left:5px;
-    } 
 }
 @media screen and (min-width: 768px) {
     #idInputSearch{
-        border-radius: 8px;
         width: 150px;
         height: 18px;
         font-size: 11px;
-        border:1px solid black;
     }
     #idInputSubmit{
         position: relative;
          left: 63%;
-        background-color: black;
-        color: rgb(0, 241, 241);;
-        border-radius: 18px;
         width: 56px;
         height: 23px;
         margin-top:3px ;
-        font: bolder;
-        font-size: 12px;
-        border: 1px solid rgb(80, 82, 82);
-        transition: color .3s, background-color .2s, border .2s;
     }
-    .classDivInputSub{
-        display: inline-flex;
-        margin-left:5px;
-    } 
     #idDivOriginSearch{
-        display: flex;  
         flex-direction: column;
         }
 }
 @media screen and (min-width: 1024px){
     #idInputSearch{
-        border-radius: 8px;
         width: 180px;
-        height: 18px;
         font-size: 12px;
     }
     #idInputSubmit{
-        background-color: black;
-        border-radius: 18px;
         width: 58px;
-        height: 23px;
         font-size: 13px;
     }
     .classDivInputSub{
-        display: inline-flex;
         position: relative;
         left: -40px;
         top: -2.5px;
@@ -178,51 +84,25 @@ border: rgb(0, 203, 203);
 }
 @media screen and (min-width: 1366px){
     #idInputSearch{
-        border-radius: 8px;
         width: 200px;
         height: 22px;
         font-size: 13px;
-        border:1px solid black;
     }
     #idInputSubmit{
-        background-color: black;
-        color: rgb(0, 241, 241);;
         border-radius: 14px;
         width: 60px;
         height: 28px;
-        font: bolder;
         font-size: 14px;
-        border: 1px solid rgb(80, 82, 82);
-        transition: color .3s, background-color .2s, border .2s;
     }
 }
 @media screen and (min-width: 1536px){
     
 #idInputSearch{
-    border-radius: 8px;
-    width: 200px;
-    height: 22px;
     font-size: 14px;
-    border:1px solid black;
 }
 #idInputSubmit{
-    background-color: black;
-    color: rgb(0, 241, 241);;
-    border-radius: 14px;
     width: 62px;
     height: 27px;
-    font: bolder;
     font-size: 15px;
-    border: 1px solid rgb(80, 82, 82);
-    transition: color .3s, background-color .2s, border .2s;
-}
-#idInputSubmit:hover{
-color: black;
-background-color: cyan;
-border: rgb(0, 203, 203);
-}
-.classDivInputSub{
-    display: inline-flex;
-    margin-left:5px;
 }
 }

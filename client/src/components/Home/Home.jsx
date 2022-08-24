@@ -45,7 +45,7 @@ useEffect(()=>{
 },[])
     return(
         <div>
-        <NavBar />
+        <NavBar user={user}/>
         <Filter page1={page1} temperaments={temperaments} breeds={breeds} />  
         <Cards breedsFavorites={breedsFavorites} breeds={breedsPagination} username={user.username} />
         {

@@ -14,7 +14,7 @@ const dispatch = useDispatch();
 
 useEffect(()=>{
     dispatch(getAllFavorites(user.username))
-},[])
+},[dispatch]);
 
 if(!user.username){ 
     return <Redirect to='/home' />

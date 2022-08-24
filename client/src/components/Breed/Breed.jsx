@@ -14,7 +14,7 @@ const Breeds = (props) => {
 
  useEffect(()=>{
         dispatch(getDetailBreed(id));
-    },[id])
+    },[id,dispatch])
 
 const temp = String(detailBreed.temperaments ?detailBreed.temperaments.map(elem=>{ return elem.name}):detailBreed.temperament);
 

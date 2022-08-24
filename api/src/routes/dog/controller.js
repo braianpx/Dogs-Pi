@@ -25,7 +25,7 @@ else if(!parseInt(name)){
     dateT.forEach(elem=>{ 
     dateB[0].setTemperaments(elem.id) 
     }) 
-    res.status(201).json({data: 'The dog breed was created successfully'})  
+    res.status(201).json({data: 'The dog breed was created successfully', idBreed:dateB[0].id})  
     }else{
     res.status(401).json({data: `The dog breed with the name ${name} already exists`})        
     }

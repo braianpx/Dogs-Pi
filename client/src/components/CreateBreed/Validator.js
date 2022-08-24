@@ -10,7 +10,7 @@ export default function validator(statee){
         }
             else if(/(?=.*[0-9])/.test(statee.name)){
                 errors.name = "should not contain Numbers";
-                        }else if(/(?=.*[(\][°¬|!#$%&-/()=?¡'¿/\/+~*}`{///^´¨/-/_/.:,;><@])/.test(statee.name)){
+                        }else if(/(?=.*[(][°¬|!#$%&-/()=?¡'¿/+~*}`{///^´¨/-/_/.:,;><@])/.test(statee.name)){
                             errors.name = "must not contain special characters";
                         }
     }
@@ -27,7 +27,7 @@ export default function validator(statee){
             errors.heightMin = "height min cannot be greater than height max";
         }else if(/(?=.*[" "])/.test(statee.heightMin)){
             errors.heightMin = "should not contain spaces";  
-        }else if(/(?=.*[(\][°¬|!#$%&-/()=?¡'¿/\/+~*}`{///^´¨/-/_/.:,;><@])/.test(statee.heightMin)){
+        }else if(/(?=.*[(][°¬|!#$%&-/()=?¡'¿//+~*}`{///^´¨/-/_/.:,;><@])/.test(statee.heightMin)){
             errors.heightMin = "must not contain special characters";
     }
 }
@@ -44,7 +44,7 @@ export default function validator(statee){
                 errors.heightMax = "height max cannot be less than height min";
             } else if(/(?=.*[" "])/.test(statee.heightMax)){
                 errors.heightMax = "should not contain spaces";  
-            }else if(/(?=.*[(\][°¬|!#$%&-/()=?¡'¿/\/+~*}`{///^´¨/-/_/.:,;><@])/.test(statee.heightMax)){
+            }else if(/(?=.*[(][°¬|!#$%&-/()=?¡'¿//+~*}`{///^´¨/-/_/.:,;><@])/.test(statee.heightMax)){
                 errors.heightMax = "must not contain special characters"; 
     }
     }
@@ -61,7 +61,7 @@ export default function validator(statee){
             errors.weightMin = "weight min cannot be greater than weight max";
         }else if(/(?=.*[" "])/.test(statee.weightMin)){
             errors.weightMin = "should not contain spaces";  
-        } else if(/(?=.*[(\][°¬|!#$%&-/()=?¡'¿/\/+~*}`{///^´¨/-/_/.:,;><@])/.test(statee.weightMin)){
+        } else if(/(?=.*[(][°¬|!#$%&-/()=?¡'¿//+~*}`{///^´¨/-/_/.:,;><@])/.test(statee.weightMin)){
             errors.weightMin = "must not contain special characters";  
     }
     }
@@ -78,7 +78,7 @@ export default function validator(statee){
             errors.weightMax = "weight max cannot be less than weight min";
         }else if(/(?=.*[" "])/.test(statee.weightMax)){
             errors.weightMax = "should not contain spaces";  
-        }  else if(/(?=.*[(\][°¬|!#$%&-/()=?¡'¿/\/+~*}`{///^´¨/-/_/.:,;><@])/.test(statee.weightMax)){
+        }  else if(/(?=.*[(][°¬|!#$%&-/()=?¡'¿//+~*}`{///^´¨/-/_/.:,;><@])/.test(statee.weightMax)){
             errors.weightMax = "must not contain special characters";  
     }   
     }
@@ -91,7 +91,7 @@ export default function validator(statee){
         errors.life_span = "should not contain letters";
     }else if(/(?=.*[" "])/.test(statee.life_span)){
         errors.life_span = "should not contain spaces";  
-    } else if(/(?=.*[(\][°¬|!#$%&-/()=?¡'¿/\/+~*}`{///^´¨/-/_/.:,;><@])/.test(statee.life_span)){
+    } else if(/(?=.*[(][°¬|!#$%&-/()=?¡'¿//+~*}`{///^´¨/-/_/.:,;><@])/.test(statee.life_span)){
         errors.life_span = "must not contain special characters";  
         }
     

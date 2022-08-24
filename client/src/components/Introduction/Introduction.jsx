@@ -7,7 +7,7 @@ class Introduction extends React.Component{
     render(){
         return(
             <div id="idDiv1">
-            <div id="idDivCont">  
+                <div id="idDivCont">  
                 <h1 className="titleInt"> Welcome!</h1>
                     <div id="idDivContLink">
                <div>

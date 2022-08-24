@@ -7,9 +7,7 @@ import Favorites from './components/Favorites/Favorites.jsx';
 import CreateBreed from './components/CreateBreed/CreateBreed.jsx';
 import LoginAndRegister from './components/LoginAndSigIn/LoginAndSigIn.jsx';
 import User from './components/User/User.jsx';
-import NotFound from './components/NotFound/NotFound.jsx';
 import './App.css';
-import NavBar from './components/NavBar/NavBar.jsx';
 function App() {
   return (
 <React.Fragment>
@@ -20,7 +18,6 @@ function App() {
     <Route exact path='/' component={Introduction} />
     <Route exact path='/home/breed/:id' component={Breed} />
     <Route exact path='/home/favorites/:username' component={Favorites}/>
-    <Route exact path='/nav' component={NavBar}/>
 </React.Fragment>
   );
 }

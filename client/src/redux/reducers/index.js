@@ -9,7 +9,7 @@ const initialState ={
     detailBreed:{},
     breedsFavorites:[],
     temperaments:[],
-    user:{username:localStorage.getItem("usToken")},
+    user:{username:localStorage.getItem("usToken")||false},
 }
 
 const rootReducer = (state = initialState, action) =>{
@@ -37,12 +37,12 @@ case GET_TEMPERAMENTS:
 case FILTER_CREATED:
     return{
         ...state,
-        breeds: state.breeds.filter((el) => { if(!Number(el.id)){ return el} })
+        breeds: state.breeds.filter((el) => !Number(el.id))
     }
 case FILTER_EXISTING:
     return {
         ...state,
-        breeds: state.breeds.filter((el) => { if(Number(el.id)){ return el} })
+        breeds: state.breeds.filter((el) => Number(el.id))
     }
 case FILTER_BY_TEMPERAMENT:
     return{

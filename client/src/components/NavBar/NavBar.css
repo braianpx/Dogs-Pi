@@ -89,8 +89,6 @@ color: black
             margin:0px 10px 0px 10px;
             width: 5%;
             height: 100%;
-            list-style: none;
-            display: flex;
             flex-wrap: wrap;
             justify-content: center;
             align-items: center;
@@ -108,64 +106,35 @@ color: black
         .classliPi{
             position: relative;
             font-size: 11px;
-            font-weight: 500;
-            border: 1px solid gray;
-            border-radius: 15px;
-            background-color:black ;
             padding: 3px 8px 5px 8px;
             margin-top: 3px;
-            transition: font-size .5s, background-color .3s;
         }
         .classliPi:hover{
-            border: 2px solid rgb(0, 203, 203);
-            background-color: cyan;
             font-size: 12px;
         }
         
         .classliPiUser{
             position: relative;
             font-size: 11px;
-            font-weight: 500;
-            border: 1px solid gray;
-            border-radius: 15px;
             background-color:rgb(77, 77, 77) ;
             padding: 3px 8px 5px 8px;
             margin-top: 3px;
             transition: font-size .5s, background-color .3s;
         }
-        .linkToLi{
-            color: rgb(0, 241, 241);
-            text-decoration: none;
-            transition: color .5s;
-        }
-        .linkToLi:hover{
-        color: black
-        }
-        
         #idH1Nav{
             text-align: center;
-            position: relative;
             top: -106px;
             left: 100px;
-            text-shadow: 1px 1px grey;
             font-size: 25px;
-            font-weight: bolder;
             width: 150px;
 
         }
         #idNav{
-            display: flex;
             align-items: center;
             flex-direction: column-reverse;
         }
         #idHeader{
-            border-radius: 0px 0px 50px 50px;
-            border-left: 1px solid rgb(0, 203, 203);
-            border-right:1px solid rgb(0, 203, 203) ;
-            border-bottom:1px solid rgb(0, 203, 203);
-            background-color:rgb(0, 241, 241);
             width: 100%;
-            height: 100px;
         }
         #idSearchNav{
             height: 30px;
@@ -174,223 +143,32 @@ color: black
             display: flex;
             justify-content: center;
             align-items: center;
-            position: relative;
             top: -98px;
-            
-
         }
    
     }
 @media screen and (min-width: 375px) {
-    #idUlNav{
-        list-style: none;
-        }
-        .classUlNav2{
-            margin:0px 10px 0px 10px;
-            width: 5%;
-            height: 100%;
-            list-style: none;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            align-content: center;
-        }
         .classDivUlNav2{
         display: flex;
-        height: 100px;
         width: 358px;
-        align-items: center;
-        justify-content: space-between;
-        flex-direction: row-reverse;
-        flex-wrap: wrap;
-        }
-        .classliPi{
-            position: relative;
-            font-size: 11px;
-            font-weight: 500;
-            border: 1px solid gray;
-            border-radius: 15px;
-            background-color:black ;
-            padding: 3px 8px 5px 8px;
-            margin-top: 3px;
-            transition: font-size .5s, background-color .3s;
-        }
-        .classliPi:hover{
-            border: 2px solid rgb(0, 203, 203);
-            background-color: cyan;
-            font-size: 12px;
-        }
-        
-        .classliPiUser{
-            position: relative;
-            font-size: 11px;
-            font-weight: 500;
-            border: 1px solid gray;
-            border-radius: 15px;
-            background-color:rgb(77, 77, 77) ;
-            padding: 3px 8px 5px 8px;
-            margin-top: 3px;
-            transition: font-size .5s, background-color .3s;
-        }
-        .linkToLi{
-            color: rgb(0, 241, 241);
-            text-decoration: none;
-            transition: color .5s;
-        }
-        .linkToLi:hover{
-        color: black
-        }
-        
+        }       
         #idH1Nav{
-            text-align: center;
-            position: relative;
-            top: -106px;
             left: 94px;
-            text-shadow: 1px 1px grey;
-            font-size: 25px;
-            font-weight: bolder;
-            width: 150px;
-
-        }
-        #idNav{
-            display: flex;
-            align-items: center;
-            flex-direction: column-reverse;
-        }
-        #idHeader{
-            border-radius: 0px 0px 50px 50px;
-            border-left: 1px solid rgb(0, 203, 203);
-            border-right:1px solid rgb(0, 203, 203) ;
-            border-bottom:1px solid rgb(0, 203, 203);
-            background-color:rgb(0, 241, 241);
-            width: 100%;
-            height: 100px;
-        }
-        #idSearchNav{
-            height: 30px;
-            width: 92%;
-            left: 10px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            top: -98px;
-            
-
         }
    
-    }
-@media screen and (min-width: 425px) {
-     .classUlNav2{
-            margin:0px 10px 0px 10px;
-            width: 5%;
-            height: 100%;
-            list-style: none;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            align-content: center;
-            }
-            .classDivUlNav2{
-            display: flex;
-            height: 100px;
-            width: 358px;
-            align-items: center;
-            justify-content: space-between;
-            flex-direction: row-reverse;
-            flex-wrap: wrap;
-            }
-            .classliPi{
-                position: relative;
-                font-size: 11px;
-                font-weight: 500;
-                border: 1px solid gray;
-                border-radius: 15px;
-                background-color:black ;
-                padding: 3px 8px 5px 8px;
-                margin-top: 3px;
-                transition: font-size .5s, background-color .3s;
-            }
-            .classliPi:hover{
-                border: 2px solid rgb(0, 203, 203);
-                background-color: cyan;
-                font-size: 12px;
-            }
-            
-            .classliPiUser{
-                position: relative;
-                font-size: 11px;
-                font-weight: 500;
-                border: 1px solid gray;
-                border-radius: 15px;
-                background-color:rgb(77, 77, 77) ;
-                padding: 3px 8px 5px 8px;
-                margin-top: 3px;
-                transition: font-size .5s, background-color .3s;
-            }
-            .linkToLi{
-                color: rgb(0, 241, 241);
-                text-decoration: none;
-                transition: color .5s;
-            }
-            .linkToLi:hover{
-            color: black
-            }
-            
-            #idH1Nav{
-                text-align: center;
-                position: relative;
-                top: -106px;
-                left: 94px;
-                text-shadow: 1px 1px grey;
-                font-size: 25px;
-                font-weight: bolder;
-                width: 150px;
-    
-            }
-            #idNav{
-                display: flex;
-                align-items: center;
-                flex-direction: column-reverse;
-            }
-            #idHeader{
-                border-radius: 0px 0px 50px 50px;
-                border-left: 1px solid rgb(0, 203, 203);
-                border-right:1px solid rgb(0, 203, 203) ;
-                border-bottom:1px solid rgb(0, 203, 203);
-                background-color:rgb(0, 241, 241);
-                width: 100%;
-                height: 100px;
-            }
-            #idSearchNav{
-                height: 30px;
-                width: 92%;
-                left: 10px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                position: relative;
-                top: -98px;
-            }           
     }
 @media screen and (min-width: 768px) {
     .classUlNav2{
         margin:4px 0px 4px 0px;
         width: 100%;
         height: 40px;
-        list-style: none;
-        display: flex;
         align-items: flex-start;
         flex-direction: row;
-        flex-wrap: wrap;
         justify-content: flex-start;
         position: relative;
         bottom: 5px;
     }
     .classDivUlNav2{
-    display: flex;
     justify-content: flex-end;
     height: 90px;
     width: 310px;
@@ -398,62 +176,33 @@ color: black
     left: -20px;
     }
     .classliPi{
-        font-size: 11px ;
-        font-weight: 500;
-        border: 1px solid gray;
-        border-radius: 15px;
         margin-right: 5px ;
-        background-color:black ;
         padding: 2px 10px 5px 10px; 
-        transition: font-size .5s, background-color .3s;
     }
     .classliPi:hover{
-        border: 2px solid rgb(0, 203, 203);
-        background-color: cyan;
         font-size: 11.5px;
     }
     
     .classliPiUser{
-        font-size: 11px;
-        font-weight: 500;
-        border: 1px solid gray;
-        border-radius: 15px;
         margin-right: 5px ;
-        background-color:rgb(123, 123, 123) ;
+        background-color:rgb(123, 123, 123);
         padding: 4px 12px 4px 12px; 
-        color: rgb(132, 215, 215);
-        text-decoration: none;
     }
     #idH1Nav{
-        display: flex;
         align-items: center;
-        position: relative;
         width: 200px;
         top: 0px;
         left: -22px;
-        text-shadow: 1px 1px grey;
         font-size: 22px;
-        font-weight: bolder;
         margin-left: 5px;
         margin-right: 5px;
     }
     #idNav{
         height: 100px;
-        display: flex;
         justify-content: space-between;
         flex-direction: row-reverse;
     }
-    #idHeader{
-        border-radius: 0px 0px 50px 50px;
-        border-left: 1px solid rgb(0, 203, 203);
-        border-right:1px solid rgb(0, 203, 203) ;
-        border-bottom:1px solid rgb(0, 203, 203);
-        background-color:rgb(0, 241, 241);
-        width: 100%;
-        height: 100px;
-    }
     #idSearchNav{
-        position: relative;
         left: -0px;
         height: 22px;
         width: 220px;
@@ -464,89 +213,35 @@ color: black
             .classUlNav2{
                 margin:5px 0px 5px 0px;
                 width: 92%;
-                height: 40px;
-                list-style: none;
-                display: flex;
-                align-items: flex-start;
-                flex-direction: row;
-                flex-wrap: wrap;
-                justify-content: flex-start;
             }
             .classDivUlNav2{
-            display: flex;
-            justify-content: flex-end;
             height: 100px;
             width: 480px;
             }
             .classliPi{
                 font-size: 12px ;
-                font-weight: 500;
-                border: 1px solid gray;
-                border-radius: 15px;
                 margin-right: 10px ;
-                background-color:black ;
-                padding: 2px 10px 5px 10px; 
-                transition: font-size .5s, background-color .3s;
             }
             .classliPi:hover{
-                border: 2px solid rgb(0, 203, 203);
-                background-color: cyan;
                 font-size: 12.5px;
             }
             
             .classliPiUser{
                 font-size: 12px;
-                font-weight: 500;
-                border: 1px solid gray;
-                border-radius: 15px;
                 margin-right: 20px ;
-                background-color:rgb(123, 123, 123) ;
                 padding: 4px 12px 6px 12px; 
-                color: rgb(132, 215, 215);
-                text-decoration: none;
             }
-            
-            .linkToLi{
-                color: rgb(0, 241, 241);
-                text-decoration: none;
-                transition: color .5s;
-            }
-            .linkToLi:hover{
-            color: black
-            }
-            
             #idH1Nav{
-                display: flex;
-                align-items: center;
                 margin-right: 140px ;
-                position: relative;
-                width: 300px;
-                top: 0px;
                 width: 400px;
                 left: 20px;
-                text-shadow: 1px 1px grey;
                 font-size: 25px;
-                font-weight: bolder;
-            }
-            #idNav{
-                height: 100px;
-                display: flex;
-                justify-content: space-between;
-                flex-direction: row-reverse;
             }
             #idHeader{
-                border-radius: 0px 0px 50px 50px;
-                border-left: 1px solid rgb(0, 203, 203);
-                border-right:1px solid rgb(0, 203, 203) ;
-                border-bottom:1px solid rgb(0, 203, 203);
-                background-color:rgb(0, 241, 241);
                 width: 99.8%;
-                height: 100px;
             }
             #idSearchNav{
-                position: relative;
                 left: -40px;
-                height: 22px;
                 width: 250px;
                 top: 33px;
             }
@@ -554,38 +249,20 @@ color: black
 @media screen and (min-width: 1366px){
     .classliPi{
         font-size: 14px ;
-        font-weight: 500;
-        border: 1px solid gray;
-        border-radius: 15px;
         margin-right: 20px ;
-        background-color:black ;
         padding: 4px 12px 6px 12px; 
-        transition: font-size .5s, background-color .3s;
     }
     .classliPiUser{
         font-size:14px ;
-        font-weight: 500;
-        border: 1px solid gray;
-        border-radius: 15px;
-        margin-right: 20px ;
-        background-color:rgb(123, 123, 123) ;
-        padding: 4px 12px 6px 12px; 
-        color: rgb(132, 215, 215);
-        text-decoration: none;
     }
     .classliPi:hover{
-        border: 2px solid rgb(0, 203, 203);
-        background-color: cyan;
         font-size: 14.5px;
     }
     #idH1Nav{
         margin-right: 260px ;
-        font-size: 25px;
         left: 90px;
-        font-weight: bolder;
     }
     #idSearchNav{
-        position: relative;
         left: -60px;
         top: 32px;
     }
@@ -593,20 +270,10 @@ color: black
 @media screen and (min-width: 1536px){
     .classUlNav2{
         margin:4px 0px 4px 0px;
-        width: 92%;
-        height: 40px;
         bottom: -1px;
-    }
-    .classDivUlNav2{
-    height: 100px;
-    width: 480px;
     }
     .classliPi{
         font-size: 16px;
-        font-weight: 500;
-        border-radius: 15px;
-        margin-right: 20px ;
-        padding: 4px 12px 6px 12px; 
     }
     .classliPi:hover{
         font-size: 18px;
@@ -614,10 +281,6 @@ color: black
     
     .classliPiUser{
         font-size:16px;
-        font-weight: 500;
-        border-radius: 15px;
-        margin-right: 20px ;
-        padding: 4px 12px 6px 12px; 
     }
     
     #idH1Nav{
@@ -625,10 +288,6 @@ color: black
         width: 350px;
         font-size: 30px;
         left: -10px;
-    }
-    #idSearchNav{
-        left: -60px;
-        top: 32px;
     }
 }
 

@@ -1,16 +1,15 @@
-
 const axios = require('axios')
 const { GET_BREEDS, GET_DETAIL_BREED, GET_BREEDS_FILTER, GET_TEMPERAMENTS,
      FILTER_CREATED, FILTER_EXISTING,FILTER_BY_TEMPERAMENT,FILTER_BY_AZ,
      FILTER_WEIGHT,GET_BREEDS_FOR_FILTER, LOGIN_USER, DELETE_USER, 
      GET_BREEDS_FAVORITES, POST_BREEDS_FAVORITES, DELETE_BREEDS_FAVORITES,
-     LOG_OUT} = require('./actionTypes.js');
+     LOG_OUT,API_LOCAL} = require('./actionTypes.js');
 
-
+const baseUrl = process.env.API_URL || API_LOCAL;
 
 export const getBreedsForFilter = () =>{
     return function(dispatch){
-        return axios.get('http://localhost:3001/dogs')
+        return axios.get(`${baseUrl}/dogs`)
         .then(data => {
             return dispatch({
                 type:GET_BREEDS_FOR_FILTER,
@@ -22,7 +21,7 @@ export const getBreedsForFilter = () =>{
 
 export const getBreeds = () =>{
     return function(dispatch){
-        return axios.get('http://localhost:3001/dogs')
+        return axios.get(`${baseUrl}/dogs`)
         .then(data => {
             return dispatch({
                 type: GET_BREEDS ,
@@ -34,7 +33,7 @@ export const getBreeds = () =>{
 export const getBreedsFilter = (name) =>{
     return async function(dispatch){
         try{ 
-            const breeds = await axios.get(`http://localhost:3001/dogs?name=${name}`)
+            const breeds = await axios.get(`${baseUrl}/dogs?name=${name}`)
             return dispatch({
                      type: GET_BREEDS_FILTER ,
                      payload: breeds.data
@@ -47,7 +46,7 @@ export const getBreedsFilter = (name) =>{
 
 export const getDetailBreed = (id) => {
     return function(dispatch){
-        return axios.get(`http://localhost:3001/dogs/${id}`)
+        return axios.get(`${baseUrl}/dogs/${id}`)
         .then(data =>{
             dispatch({
                 type: GET_DETAIL_BREED ,
@@ -58,7 +57,7 @@ export const getDetailBreed = (id) => {
 }
 
 export const postBreed = ({name,heightMin,heightMax,weightMin,weightMax,life_span,url,temperament}) => { 
-    return axios.post("http://localhost:3001/dog",{
+    return axios.post(`${baseUrl}/dog`,{
             name,
             height:{metric:heightMin + " - " + heightMax},
             weight:{metric:weightMin + " - " + weightMax},
@@ -72,7 +71,7 @@ export const postBreed = ({name,heightMin,heightMax,weightMin,weightMax,life_spa
 
 export const getTemperaments = () => {
     return function(dispatch){
-        return axios.get('http://localhost:3001/temperament')
+        return axios.get(`${baseUrl}/temperament`)
         .then(info => {
             dispatch({
                 type:GET_TEMPERAMENTS ,
@@ -129,7 +128,7 @@ export const filterByWeight = (data) =>{
 export const createUser = (signinForm) =>{
     return function(){    
     return axios({
-            baseURL:'http://localhost:3001/',
+            baseURL:`${baseUrl}/`,
             url: 'user/register',
             method: 'post',
             headers: {
@@ -144,7 +143,7 @@ export const createUser = (signinForm) =>{
 export const logInUser = (signinForm) =>{
     return function(dispatch){
         return axios({
-            baseURL: 'http://localhost:3001/',
+            baseURL: `${baseUrl}/`,
             url: 'user/logIn',
             method: 'post',
             headers: {
@@ -168,7 +167,7 @@ export const logInUser = (signinForm) =>{
 export const deleteUser = () =>{
 return function(dispatch){
     return axios({
-        baseURL: 'http://localhost:3001/',
+        baseURL: `${baseUrl}/`,
         url: 'user/delete',
         method: 'delete',
         headers: {
@@ -203,7 +202,7 @@ export const logOut = () =>{
 export const getAllFavorites = (username) =>{
     return function(dispatch){
         return axios({
-            baseURL: 'http://localhost:3001',
+            baseURL: `${baseUrl}`,
             url: `/favorites/${username}`,
             method: 'get',
             headers: {
@@ -230,7 +229,7 @@ export const getAllFavorites = (username) =>{
 export const addFavorite = (idBreed)=>{
     return function(dispatch){
         return axios({
-            baseURL: 'http://localhost:3001',
+            baseURL: `${baseUrl}`,
             url: `/favorites`,
             method: 'post',
             headers: {
@@ -250,7 +249,7 @@ export const addFavorite = (idBreed)=>{
 export const deleteFavortite =  (idBreed, idFavorite) =>{
     return function(dispatch){
       return axios({
-            baseURL: 'http://localhost:3001',
+            baseURL: `${baseUrl}`,
             url: `/favorites/delete`,
             method: 'delete',
             headers: {
