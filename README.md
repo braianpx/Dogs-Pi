@@ -21,7 +21,7 @@ This project uses APIs from https://thedogapi.com/
 
 ### Visit this project
 #### (Vercel and Heroku deploy)
-LINK: 
+LINK: https://dogs-pi-braianpx.vercel.app/
 
 ---
 
@@ -44,3 +44,16 @@ LINK:
 ---
 
 ### Project screens
+![image](/client/src/img/readme/intro.png)
+![image](/client/src/img/readme/home.png)
+![image](/client/src/img/readme/filtro.png)
+![image](/client/src/img/readme/searchnav.png)
+![image](/client/src/img/readme/pagination.png)
+![image](/client/src/img/readme/detail-breed.png)
+![image](/client/src/img/readme/create%20new%20dog.png)
+![image](/client/src/img/readme/new%20dog.png)
+![image](/client/src/img/readme/create%20user.png)
+![image](/client/src/img/readme/login%20user.png)
+![image](/client/src/img/readme/delete%20account.png)
+![image](/client/src/img/readme/home%20and%20favorites.png)
+![image](/client/src/img/readme/favorites.png)
