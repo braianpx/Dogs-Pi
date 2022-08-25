@@ -3,7 +3,7 @@ import { GET_BREEDS, GET_DETAIL_BREED, GET_BREEDS_FILTER,
      FILTER_BY_TEMPERAMENT, FILTER_BY_AZ,FILTER_WEIGHT,
      DELETE_USER, LOGIN_USER, GET_BREEDS_FAVORITES,
      POST_BREEDS_FAVORITES, DELETE_BREEDS_FAVORITES,LOG_OUT,
-     GET_BREEDS_FOR_FILTER,} from '../actions/actionTypes'
+     } from '../actions/actionTypes'
 
 const initialState ={
     breeds:[],

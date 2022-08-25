@@ -10,8 +10,8 @@ const { GET_BREEDS, GET_DETAIL_BREED, GET_BREEDS_FILTER, GET_TEMPERAMENTS,
 export const getBreedsForFilter = () =>{
     return function(){
         return axios.get(URL_GET_DOGS)
-        .then(data => {return data.data})
-        .catch(err=>{return err})
+        .then(data =>  data.data)
+        .catch(err=>  err)
     }
 }
 
