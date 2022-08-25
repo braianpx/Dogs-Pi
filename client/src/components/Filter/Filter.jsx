@@ -1,4 +1,5 @@
-import { filterCdOrEg, getBreeds, filterTemperament, filterAZ, filterByWeight,getBreedsForFilter} from "../../redux/actions/index"; 
+import { filterCdOrEg, getBreeds, filterTemperament,
+     filterAZ, filterByWeight,getBreedsForFilter} from "../../redux/actions/index"; 
 import { useDispatch } from "react-redux";
 import './Filter.css'
 
@@ -7,9 +8,10 @@ const Filter = (props) =>{
 const dispatch = useDispatch();
 
 const filterTemp =  (input) => { 
+if(input === 'All') dispatch(getBreeds()) 
+else   
 dispatch(getBreedsForFilter()).then(data =>{
-    // let dato = data.payload.filter(el=>{if(el.temperament)if(el.temperament.includes(input)) return el })
-    let dato = data.payload.filter(el=> el.temperament.includes(input))
+    let dato = data.payload.filter(el=> el.temperament?.includes(input))
     const dato1 = []
     data.payload.forEach(el=>{
         if(el.temperaments){
@@ -123,6 +125,7 @@ else if(input === "Lowest"){
             <div className="classDivFilter">
             <select className="classSelectFilt"  onChange={(e)=>filterTemp(e.target.value)}>
             <option className="classOptionFilt" disabled selected>Order By Temperament</option>
+            <option className="classOptionFilt" key='All' >All</option>
             {props.temperaments? 
             props.temperaments.map(el=>{
                 return(
@@ -133,11 +136,30 @@ else if(input === "Lowest"){
             </select>
             </div>
             <div className="classDivFilter">
-            <select className="classSelectFilt"  onChange={(e)=>{dispatch(getBreeds()).then(data=>{dispatch(filterCdOrEg(e.target.value)); props.page1();})}}>
-            <option className="classOptionFilt" disabled selected value="Order By Breed" >Order By Breed </option>
-            <option className="classOptionFilt" value="Existing">Existing</option>
-            <option className="classOptionFilt" value="Created" >Created</option>
+            <select className="classSelectFilt" 
+            onChange={(e)=>{e.target.value === 'All'? 
+            dispatch(getBreeds())
+            : dispatch(getBreeds())
+            .then(data=>{
+            dispatch(filterCdOrEg(e.target.value))
+            })
+            props.page1();
+            }}>
+            <option 
+            className="classOptionFilt" 
+            disabled selected 
+            value="Order By Breed" >Order By Breed </option>
+            <option 
+            className="classOptionFilt" 
+            value="All">All</option>
+            <option 
+            className="classOptionFilt" 
+            value="Existing">Existing</option>
+            <option 
+            className="classOptionFilt" 
+            value="Created" >Created</option>
             </select>
+
             </div>
             <div className="classDivFilter">
                 <select className="classSelectFilt" onChange={(e)=>{filterName(e.target.value)}} >

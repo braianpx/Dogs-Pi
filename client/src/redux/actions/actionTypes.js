@@ -13,8 +13,21 @@ const FILTER_WEIGHT = "FILTER_WEIGHT";
 const GET_BREEDS_FOR_FILTER = "GET_BREEDS_FOR_FILTER";
 const DELETE_USER = "DELETE_USER";
 const LOGIN_USER = "LOGIN_USER";
-const LOG_OUT = "LOG_OUT"
-const API_LOCAL= 'http://localhost:3001'
+const LOG_OUT = "LOG_OUT";
+
+////////////////
+
+const API_URL = "http://localhost:3001";
+const URL_GET_DOGS = `${API_URL}/dogs`;
+const URL_GET_DOGS_BY_NAME = `${API_URL}/dogs?name=`;
+const URL_POST_DOGS = `${API_URL}/dog`;
+const URL_GET_TEMPERAMENTS  = `${API_URL}/temperament`;
+const URL_POST_USER_REGISTER = 'user/register';
+const URL_POST_USER_LOGIN = 'user/logIn';
+const URL_DELETE_USER = 'user/delete';
+const URL_FAVORITES = "/favorites";
+const URL_FAVORITES_DELETE = '/favorites/delete';
+
 module.exports = {
     GET_BREEDS,
     GET_BREEDS_FILTER,
@@ -32,5 +45,15 @@ module.exports = {
     DELETE_USER,
     LOGIN_USER,
     LOG_OUT,
-    API_LOCAL,
+    URL_GET_DOGS,
+    URL_GET_DOGS_BY_NAME,
+    URL_POST_DOGS,
+    URL_GET_TEMPERAMENTS,
+    API_URL,
+    URL_POST_USER_REGISTER,
+    URL_POST_USER_LOGIN,
+    URL_DELETE_USER,
+    URL_FAVORITES,
+    URL_FAVORITES_DELETE,
+    
 }
