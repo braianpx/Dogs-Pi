@@ -1,4 +1,4 @@
-import { Redirect } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux'; 
 import { useEffect } from 'react';
 import { getAllFavorites } from '../../redux/actions/index.js';
@@ -14,10 +14,10 @@ const dispatch = useDispatch();
 
 useEffect(()=>{
     dispatch(getAllFavorites(user.username))
-},[dispatch]);
+},[dispatch,user.username]);
 
 if(!user.username){ 
-    return <Redirect to='/home' />
+    return <Navigate to="/home" />
 }
     return(
         <>

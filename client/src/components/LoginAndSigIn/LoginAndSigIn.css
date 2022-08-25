@@ -14,7 +14,8 @@
     position: relative;
     bottom: 19px;
     background-color: rgb(159, 229, 252);
-    border: 1px solid rgb(159, 229, 252);
+    border: 1px solid black;
+    border-top:0px;
     border-bottom-right-radius: 12px;
     border-bottom-left-radius: 12px;
     padding: 10px 10px 10px 10px;
@@ -27,7 +28,7 @@
     position: relative;
     bottom: 10px;
     background-color: rgb(159, 229, 252);
-    border: 1px solid rgb(159, 229, 252);
+    border: 1px solid black ;
     border-top-left-radius: 13px;
     border-top-right-radius: 13px;
     width: 80px;
@@ -41,7 +42,9 @@
     position: relative;
     bottom: 10px;
     background-color: white;
-    border: 1px solid white;
+    border-top: 1px solid black;
+    border-left:1px solid black;
+    border-right: 0px solid transparent;
     border-top-left-radius: 13px;
     border-top-right-radius: 13px;
     width: 70px;
@@ -51,7 +54,8 @@
 .classDivSwitch{
     display: flex;
     justify-content: flex-start;
-    border: 1px solid white;
+    border-top: 1px solid black;
+    border-right:1px solid black ;
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
     background-color: white;

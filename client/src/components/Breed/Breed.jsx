@@ -1,14 +1,14 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getDetailBreed } from '../../redux/actions/index';
+import { useParams } from 'react-router-dom';
 import NavBar from '../NavBar/NavBar';
 import ImgNull from '../../img/5.jpg';
 import './Breed.css'
 
-const Breeds = (props) => {
- 
- 
- const id = props.match.params.id;
+const Breeds = () => {
+
+ const {id} = useParams();
  const dispatch = useDispatch();
  const detailBreed = useSelector(state => state.detailBreed);
 
@@ -16,7 +16,9 @@ const Breeds = (props) => {
         dispatch(getDetailBreed(id));
     },[id,dispatch])
 
-const temp = String(detailBreed.temperaments ?detailBreed.temperaments.map(elem=>{ return elem.name}):detailBreed.temperament);
+const temp = String(detailBreed.temperaments?
+    detailBreed.temperaments.map(elem=>{ return elem.name})
+    :detailBreed.temperament);
 
 return(
     <div>
@@ -35,7 +37,7 @@ return(
                    
                     
                     <h2 id='idH2Breed'>{detailBreed.name}</h2>
-                    <p className='classPBreed'>{temp}</p>
+                    <p className='classPBreed'>{temp === "undefined"? 'Unknown' : temp }</p>
                     <p className='classPBreed'>height: {detailBreed.height.metric} cm</p>
                     <p className='classPBreed'>weight: {detailBreed.weight.metric} kg</p>
                     <p className='classPBreed'>life span: {detailBreed.life_span}</p>

@@ -3,7 +3,7 @@ import { postBreed, getTemperaments } from '../../redux/actions/index';
 import validator from './Validator.js';
 import './CreateBreed.css';
 import { useState , useEffect} from 'react';
-import { Link, Redirect } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 
 const CreateBreeed  = () =>{
 
@@ -98,7 +98,7 @@ const filterTemp = state.temperament.filter(el=> el !== event.target.value)
 }
 
 if(state.redirect){
-    return <Redirect to={`/home/breed/${state.redirect}`} />
+    return <Navigate to={`/home/breed/${state.redirect}`} replace />
 }else{
     return(
         <div className='classDivForm'>

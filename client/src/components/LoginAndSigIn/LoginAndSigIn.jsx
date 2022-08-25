@@ -1,16 +1,17 @@
 import { useState } from "react";
 import { useSelector } from "react-redux";
-import { Redirect } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 import NavBar from "../NavBar/NavBar";
 import LogIn from "../LogIn/LogIn.jsx";
 import SigIn from "../SigIn/SigIn.jsx";
 import './LoginAndSigIn.css';
 
-const LoginAndSigIn = (props) => {
+const LoginAndSigIn = () => {
 
-const [switchLog, setSwitchLog] = useState(true)
+const [switchLog, setSwitchLog] = useState(false)
 
 const user = useSelector(state => state.user)
+
 
 const switchLogIn = () =>{
     setSwitchLog(true)
@@ -20,7 +21,7 @@ const switchRegister = () =>{
 }
 
 if(user.username){ 
-        return <Redirect to='/home' />   
+        return <Navigate to='/home' />   
 }
     return(
     <>

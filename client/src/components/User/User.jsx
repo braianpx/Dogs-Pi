@@ -1,6 +1,6 @@
 import { Component } from "react";
 import { connect } from "react-redux";
-import { Redirect } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 import { deleteUser, logOut } from '../../redux/actions/index.js';
 import NavBar from "../NavBar/NavBar";
 import './User.css';
@@ -55,10 +55,9 @@ visibilityBtnHiddenOut(){
      })
 }
 
-
     render(){
         if(!this.props.user.username){
-            return <Redirect to="/home" />
+            return <Navigate to="/home" />
         }
         return(
             <div className="classDivContentuser">

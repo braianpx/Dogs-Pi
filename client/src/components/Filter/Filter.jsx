@@ -8,7 +8,8 @@ const dispatch = useDispatch();
 
 const filterTemp =  (input) => { 
 dispatch(getBreedsForFilter()).then(data =>{
-    let dato = data.payload.filter(el=>{if(el.temperament)if(el.temperament.includes(input)) return el })
+    // let dato = data.payload.filter(el=>{if(el.temperament)if(el.temperament.includes(input)) return el })
+    let dato = data.payload.filter(el=> el.temperament.includes(input))
     const dato1 = []
     data.payload.forEach(el=>{
         if(el.temperaments){

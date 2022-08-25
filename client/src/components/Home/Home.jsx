@@ -42,7 +42,7 @@ useEffect(()=>{
     if(user.username){
     dispatch(getAllFavorites(user.username));
     }
-},[])
+},[dispatch,user.username])
     return(
         <div>
         <NavBar user={user}/>

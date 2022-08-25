@@ -1,22 +1,21 @@
-<p align='left'>
-    <img src='https://static.wixstatic.com/media/85087f_0d84cbeaeb824fca8f7ff18d7c9eaafd~mv2.png/v1/fill/w_160,h_30,al_c,q_85,usm_0.66_1.00_0.01/Logo_completo_Color_1PNG.webp' </img>
-</p>
+# Dogs App
 
-# Individual Project - Henry Dogs
+## Single page application (SPA) where you can:
 
-<p align="left">
-  <img height="200" src="./dog.png" />
-</p>
+- Search Dogs by name.
+- Create new dogs.
+- Filter by create or existing dogs.
+- Filter by temperament.
+- Order alphabetically.
+- Order by weight.
+- See detailed information of the dogs.
+- Craete acount.
+- Add dogs to favorites.
+- LogIn and registered on the page.
 
-## Objetivos del Proyecto
+This project uses APIs from: https://thedogapi.com/
 
-- Construir una App utlizando React, Redux, Node y Sequelize.
-- Afirmar y conectar los conceptos aprendidos en la carrera.
-- Aprender mejores prácticas.
-- Aprender y practicar el workflow de GIT.
-- Usar y practicar testing.
-
-## Horarios y Fechas
+# Visit this project
 
 El proyecto tendrá una duración máxima de tres semanas. En el caso de que completan todas las tareas antes de dicho lapso podrán avisar a su Instructor para coordinar una fecha de presentación del trabajo (DEMO).
 

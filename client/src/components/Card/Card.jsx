@@ -6,7 +6,6 @@ import { addFavorite, deleteFavortite, getAllFavorites } from '../../redux/actio
 import { useDispatch } from 'react-redux';
 
 const Card = ({ username, favoriteId, breedsFavorites, id, name, img, temperaments, height})=>{
-
 const dispatch = useDispatch();
 
 const confirmUser = () => {
@@ -39,7 +38,7 @@ const confirmUser = () => {
             <div id='divImgCard'>
                 <img className='classImgCard' src={img != null? img: ImgNull } alt='img_Dog'  />
             </div>
-                <p className='classText' >{temperaments}</p>
+                <p className='classText' >{temperaments? temperaments:"Unknown"}</p>
                 <p className='classText' >{height} kg</p>
                 </Link>
             
