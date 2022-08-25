@@ -2,9 +2,9 @@ import { Component } from "react";
 import { connect } from 'react-redux';
 import { createUser } from '../../redux/actions/index.js'; 
 import validatorRegister from './Validator.js';
-import './SigIn.css';
+import './SignUp.css';
 
-class SigIn extends Component {
+class SignUp extends Component {
 constructor(props){
     super(props)
     this.state = {
@@ -111,4 +111,4 @@ handleInputChange(event){
     }
 }
 
-export default connect(null,{ createUser })(SigIn);
+export default connect(null,{ createUser })(SignUp);

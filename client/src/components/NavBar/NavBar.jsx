@@ -30,7 +30,7 @@ render(){
                           { !this.props.user.username?
                         <>
                         <li className='classliPi'><Link to='/home/session' className='linkToLi'> LogIn </Link></li>
-                        <li className='classliPi'><Link to='/home/session' className='linkToLi'> SigIn </Link></li>
+                        <li className='classliPi'><Link to='/home/session' className='linkToLi'> SignUp </Link></li>
                         </>: null
                           }
                         </ul>

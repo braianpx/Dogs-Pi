@@ -3,8 +3,8 @@ import { useSelector } from "react-redux";
 import { Navigate } from "react-router-dom";
 import NavBar from "../NavBar/NavBar";
 import LogIn from "../LogIn/LogIn.jsx";
-import SigIn from "../SigIn/SigIn.jsx";
-import './LoginAndSigIn.css';
+import SignUp from "../SignUp/SignUp.jsx";
+import './LoginAndSignUp.css';
 
 const LoginAndSigIn = () => {
 
@@ -29,12 +29,12 @@ if(user.username){
         <div className="classDivOne">
         <div className="classDivSwitch">
                 <button onClick={()=> switchLogIn()} className={ switchLog? 'classSwitTrue':'classSwitchFalse'} > LogIn </button>
-                <button onClick={()=> switchRegister()} className={ !switchLog? 'classSwitTrue':'classSwitchFalse'} > SigIn </button>
+                <button onClick={()=> switchRegister()} className={ !switchLog? 'classSwitTrue':'classSwitchFalse'} > SignUp </button>
                 </div>
             <div className="classDivContent">
             { switchLog?
             <LogIn />:
-            <SigIn />
+            <SignUp />
                 }
             </div>
         </div>

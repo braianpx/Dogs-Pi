@@ -5,7 +5,7 @@ import Home from './components/Home/Home.jsx';
 import Breed from './components/Breed/Breed.jsx';
 import Favorites from './components/Favorites/Favorites.jsx';
 import CreateBreed from './components/CreateBreed/CreateBreed.jsx';
-import LoginAndRegister from './components/LoginAndSigIn/LoginAndSigIn.jsx';
+import LoginAndSignUp from './components/LoginAndSignUp/LoginAndSignUp.jsx';
 import User from './components/User/User.jsx';
 import NotFound from './components/NotFound/NotFound.jsx';
 import './App.css';
@@ -14,7 +14,7 @@ function App() {
 <React.Fragment>
   <Routes>
     <Route exact path='/home/user' element={<User />} />
-    <Route path='/home/session' element={<LoginAndRegister />}/>
+    <Route path='/home/session' element={<LoginAndSignUp />}/>
     <Route exact path='/home' element={<Home />}/>
     <Route exact path='/create_breed_dog' element={<CreateBreed />}/>
     <Route exact path='/' element={<Introduction />} />
