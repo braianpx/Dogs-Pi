@@ -15,7 +15,13 @@ async function getDogs (req, res){
                 })
             })
 
-            const breeds1 = await Breed.findAll();
+            const breeds1 = await Breed.findAll({
+                include: [
+                    {
+                        model: Temperament
+                    }
+                ]
+            });
             const breedsFilter = breeds1.filter(elem => elem.name.toUpperCase().includes(name.toUpperCase()))
             
             const apiC1 = breedsFilter.concat(info2.data);

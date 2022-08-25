@@ -1,21 +1,17 @@
 const axios = require('axios')
 const { GET_BREEDS, GET_DETAIL_BREED, GET_BREEDS_FILTER, GET_TEMPERAMENTS,
      FILTER_CREATED, FILTER_EXISTING,FILTER_BY_TEMPERAMENT,FILTER_BY_AZ,
-     FILTER_WEIGHT,GET_BREEDS_FOR_FILTER, LOGIN_USER, DELETE_USER, 
-     GET_BREEDS_FAVORITES, POST_BREEDS_FAVORITES, DELETE_BREEDS_FAVORITES,
-     LOG_OUT,URL_GET_DOGS,URL_GET_DOGS_BY_NAME,URL_POST_DOGS,
-     URL_GET_TEMPERAMENTS,API_URL,URL_POST_USER_REGISTER,URL_POST_USER_LOGIN,
-     URL_DELETE_USER,URL_FAVORITES,URL_FAVORITES_DELETE} = require('./actionTypes.js');
+     FILTER_WEIGHT, LOGIN_USER, DELETE_USER, GET_BREEDS_FAVORITES, 
+     POST_BREEDS_FAVORITES, DELETE_BREEDS_FAVORITES,LOG_OUT,URL_GET_DOGS,
+     URL_GET_DOGS_BY_NAME,URL_POST_DOGS,URL_GET_TEMPERAMENTS,API_URL,
+     URL_POST_USER_REGISTER,URL_POST_USER_LOGIN,URL_DELETE_USER,
+     URL_FAVORITES,URL_FAVORITES_DELETE} = require('./actionTypes.js');
 
 export const getBreedsForFilter = () =>{
-    return function(dispatch){
+    return function(){
         return axios.get(URL_GET_DOGS)
-        .then(data => {
-            return dispatch({
-                type:GET_BREEDS_FOR_FILTER,
-                payload: data.data
-            })
-        }).catch(err=>{return err})
+        .then(data => {return data.data})
+        .catch(err=>{return err})
     }
 }
 

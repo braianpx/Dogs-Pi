@@ -11,9 +11,10 @@ const filterTemp =  (input) => {
 if(input === 'All') dispatch(getBreeds()) 
 else   
 dispatch(getBreedsForFilter()).then(data =>{
-    let dato = data.payload.filter(el=> el.temperament?.includes(input))
+    console.log(data)
+    let dato = data.filter(el=> el.temperament?.includes(input))
     const dato1 = []
-    data.payload.forEach(el=>{
+    data.forEach(el=>{
         if(el.temperaments){
              el.temperaments.forEach(elem=>{
                 if(elem.name === input) dato1.push(el);
