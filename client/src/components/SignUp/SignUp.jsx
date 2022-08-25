@@ -103,7 +103,7 @@ handleInputChange(event){
                     ></input>
                 </div>
                 <div className="classBtnSigIn">
-                    <button className="classBtnSubmitSigIn" type="submit" value="Submit" > Sigin </button>
+                    <button className="classBtnSubmitSigIn" type="submit" value="Submit" > SignUp </button>
                 </div>
             </form>
         </div>
