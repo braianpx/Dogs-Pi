@@ -20,7 +20,7 @@ This project uses APIs from https://thedogapi.com/
 ---
 
 ### Visit this project
-#### (Vercel and Heroku deploy)
+#### (Vercel and Railway deploy)
 LINK: https://dogs-pi-braianpx.vercel.app/
 
 ---
