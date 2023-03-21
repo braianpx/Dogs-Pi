@@ -44,5 +44,5 @@ LINK: https://dogs-pi-braianpx.vercel.app/
 ---
 
 ### Project screens
-![image](/client/src/img/readme/intro.png)
+![image](/client/src/img/readme/Dogs-PI.png)
 ![image](/client/src/img/readme/home.png)
